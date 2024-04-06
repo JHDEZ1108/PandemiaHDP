@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
+from .forms import CommentForm
 
 
 # Create your views here.
@@ -55,3 +56,17 @@ def signin(request):
 
         login(request, user)
         return redirect('blog')
+
+def create_comment(request):
+    
+    if request.method == 'GET':
+        return render(request, 'create_comment.html', {
+            'form': CommentForm
+        })
+    else:
+        print(request.POST)
+        return render(request, 'create_comment.html', {
+            'form': CommentForm
+        })
+    
+    
