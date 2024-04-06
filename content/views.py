@@ -28,11 +28,11 @@ def signup(request):
             except IntegrityError:
                 return render(request, 'signup.html', {
                     'form': UserCreationForm,
-                    'error': 'Username already exist'
+                    'error': 'El Username ya existe'
                 })
         return render(request, 'signup.html', {
             'form': UserCreationForm,
-            'error': 'Password do not match'
+            'error': 'Las contraseñas no coinciden'
         })
 
 
@@ -64,9 +64,15 @@ def create_comment(request):
             'form': CommentForm
         })
     else:
-        print(request.POST)
-        return render(request, 'create_comment.html', {
-            'form': CommentForm
-        })
-    
+        try:
+            form = CommentForm(request.POST)
+            new_comment = form.save(commit=False)
+            new_comment.user = request.user
+            new_comment.save()
+            return redirect('blog')
+        except ValueError:
+            return render(request, 'create_comment.html', {
+                'form': CommentForm,
+                'error': 'Error al agregar comentario'
+            })
     

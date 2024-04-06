@@ -3,6 +3,8 @@
 {% block content %}
   <h1> Create comment </h1>
   
+  
+  {{error}}
   <form action="blog/createcomment" method="POST">
     {% csrf_token %}
     {{form}}
