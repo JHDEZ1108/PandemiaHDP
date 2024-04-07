@@ -17,7 +17,7 @@ class Comment(models.Model):
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name='comments')  # Relación con Blog
     content = models.TextField(blank=True)
     created = models.DateTimeField(auto_now_add=True)
-    likes = models.PositiveIntegerField()
+    likes = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return f"{self.blog.title} - por {self.user.username}"  # Retorna los primeros 50 caracteres
