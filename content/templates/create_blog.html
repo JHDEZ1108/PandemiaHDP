@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Crear un nuevo blog</h1>
+    <!-- Muestra errores del formulario si los hay -->
+    {% if error %}
+      <div class="alert alert-danger" role="alert">
+        {{ error }}
+      </div>
+    {% endif %}
+    
+    <!-- Formulario para crear un nuevo blog -->
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" >Publicar Blog</button>
+    </form>
+  </div>
+{% endblock %}

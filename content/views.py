@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
-from .forms import CommentForm
+from .forms import CommentForm, BlogForm
 from .models import Comment, Blog
 
 
@@ -82,3 +82,21 @@ def blog_detail(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     comments = blog.comments.all()  # Utiliza el related_name para obtener todos los comentarios asociados
     return render(request, 'blog_detail.html', {'blog': blog, 'comments': comments})
+
+def create_blog(request):
+    if request.method == 'GET':
+        return render(request, 'create_blog.html', {
+            'form': BlogForm()  # Inicializa un formulario vacío
+        })
+    else:
+        form = BlogForm(request.POST)
+        if form.is_valid():
+            new_blog = form.save(commit=False)
+            new_blog.user = request.user  # Asigna el usuario actual como el autor del blog
+            new_blog.save()
+            return redirect('blog_detail', blog_id=new_blog.id)  # Redirige a la vista detallada del nuevo blog
+        else:
+            return render(request, 'create_blog.html', {
+                'form': BlogForm(),  # Devuelve el formulario con errores
+                'error': 'Error al crear el blog'
+            })
