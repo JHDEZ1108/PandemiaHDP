@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 
+{% load widget_tweaks %}
+
 {% block content %}
-<div class="container">
-    <h1>{% if blog %}Editar{% else %}Crear{% endif %} Blog</h1>
+<div class="container mt-4">
+    <h1 class="mb-4">{% if blog %}Editar{% else %}Crear{% endif %} Blog</h1>
     <!-- Muestra errores del formulario si los hay -->
     {% if error %}
     <div class="alert alert-danger" role="alert">
@@ -11,9 +13,24 @@
     {% endif %}
 
     <!-- Formulario para crear o actualizar un blog -->
-    <form method="post">
+    <form method="post" class="mb-3">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="form-group mb-3">
+            <label for="{{ form.title.id_for_label }}">Title:</label>
+            {{ form.title|add_class:"form-control" }}
+        </div>
+        <div class="form-group mb-3">
+            <label for="{{ form.content.id_for_label }}">Content:</label>
+            {{ form.content|add_class:"form-control" }}
+        </div>
+        <div class="form-group mb-3">
+            <label for="{{ form.subtitle.id_for_label }}">Subtitle:</label>
+            {{ form.subtitle|add_class:"form-control" }}
+        </div>
+        <div class="form-group mb-3">
+            <label for="{{ form.content2.id_for_label }}">Content2:</label>
+            {{ form.content2|add_class:"form-control" }}
+        </div>
         <button type="submit" class="btn btn-primary">{% if blog %}Actualizar{% else %}Publicar{% endif %} Blog</button>
     </form>
 </div>
