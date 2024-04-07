@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
+from django.contrib import messages  # Importa esto para enviar mensajes al template
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from .forms import CommentForm, BlogForm
@@ -85,28 +86,26 @@ def blog_detail(request, blog_id):
 
 def create_or_update_blog(request, blog_id=None):
     template_name = 'create_blog.html'  # Plantilla predeterminada para crear un nuevo blog
-
+    
+    blog = None
     if blog_id:
         blog = get_object_or_404(Blog, pk=blog_id, user=request.user)  # Asegura que solo el autor pueda editar
         template_name = 'update_blog.html'  # Cambia la plantilla para actualizar un blog existente
-        if request.method == 'POST':
-            form = BlogForm(request.POST, instance=blog)
+    
+    if request.method == 'POST':
+        form = BlogForm(request.POST, instance=blog)
+        try:
             if form.is_valid():
-                updated_blog = form.save()
-                return redirect('blog_detail', blog_id=updated_blog.id)
-        else:
-            form = BlogForm(instance=blog)
+                saved_blog = form.save(commit=False)
+                if not blog_id:  # Solo establece el usuario si es un nuevo blog
+                    saved_blog.user = request.user
+                saved_blog.save()
+                return redirect('blog_detail', blog_id=saved_blog.id)
+        except ValueError as e:
+            # Maneja el error específico aquí. Por ejemplo, podrías enviar un mensaje al template.
+            messages.error(request, f'Error al guardar el blog: {e}')
     else:
-        blog = None
-        if request.method == 'POST':
-            form = BlogForm(request.POST)
-            if form.is_valid():
-                new_blog = form.save(commit=False)
-                new_blog.user = request.user
-                new_blog.save()
-                return redirect('blog_detail', blog_id=new_blog.id)
-        else:
-            form = BlogForm()
+        form = BlogForm(instance=blog)
 
     return render(request, template_name, {
         'form': form,
