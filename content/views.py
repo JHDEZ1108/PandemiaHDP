@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages  # Importa esto para enviar mensajes al template
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
-from .forms import CommentForm, BlogForm
+from .forms import CommentForm, BlogForm, SignUpForm
 from .models import Comment, Blog
 
 
@@ -17,26 +17,21 @@ def home(request):
 
 def signup(request):
     if request.method == 'GET':
-        return render(request, 'signup.html', {
-            'form': UserCreationForm
-        })
+        return render(request, 'signup.html', {'form': SignUpForm()})
     else:
-        if request.POST['password1'] == request.POST['password2']:
+        form = SignUpForm(request.POST)
+        if form.is_valid():
             try:
-                user = User.objects.create_user(
-                    username=request.POST['username'], password=request.POST['password1'])
-                user.save()
-                login(request, user)  # Cookie Django
-                return redirect('blog')
-            except IntegrityError:
-                return render(request, 'signup.html', {
-                    'form': UserCreationForm,
-                    'error': 'El Username ya existe'
-                })
-        return render(request, 'signup.html', {
-            'form': UserCreationForm,
-            'error': 'Las contraseñas no coinciden'
-        })
+                user = form.save()
+                login(request, user)
+                return redirect('blog')  # Asegúrate de que 'blog' es el nombre correcto de la URL de redirección deseada
+            except IntegrityError as e:
+                # Aquí puedes comprobar si el error es específico de un nombre de usuario duplicado o algo más
+                error_message = 'El nombre de usuario ya está en uso' if 'UNIQUE constraint' in str(e) else 'Ocurrió un error al crear el usuario'
+                return render(request, 'signup.html', {'form': SignUpForm(), 'error': error_message})
+        else:
+            # En caso de que el formulario no sea válido, se renderiza de nuevo con los errores.
+            return render(request, 'signup.html', {'form': form, 'error': form.errors})
 
 def signout(request):
     logout(request)
