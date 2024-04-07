@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages  # Importa esto para enviar mensajes al template
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from .forms import CommentForm, BlogForm
 from .models import Comment, Blog
+
 
 
 # Create your views here.
@@ -52,6 +54,7 @@ def signin(request):
         login(request, user)
         return redirect('blog')
 
+@login_required
 def create_comment(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)  # Obtiene el blog o devuelve un error 404 si no existe
     if request.method == 'GET':
@@ -84,6 +87,12 @@ def blog_detail(request, blog_id):
     comments = blog.comments.all()  # Utiliza el related_name para obtener todos los comentarios asociados
     return render(request, 'blog_detail.html', {'blog': blog, 'comments': comments})
 
+
+def es_superusuario(user):
+    return user.is_superuser
+
+@login_required
+@user_passes_test(es_superusuario)
 def create_or_update_blog(request, blog_id=None):
     template_name = 'create_blog.html'  # Plantilla predeterminada para crear un nuevo blog
     
