@@ -1,20 +1,36 @@
 {% extends 'base.html' %}
+{% load widget_tweaks %}
 
 {% block content %}
-  <div class="container">
-    <h1>Crear un nuevo blog</h1>
-    <!-- Muestra errores del formulario si los hay -->
-    {% if error %}
-      <div class="alert alert-danger" role="alert">
-        {{ error }}
-      </div>
-    {% endif %}
-    
-    <!-- Formulario para crear un nuevo blog -->
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit" >Publicar Blog</button>
-    </form>
-  </div>
+<div class="container mt-4">
+  <h1>Crear un nuevo blog</h1>
+  <!-- Muestra errores del formulario si los hay -->
+  {% if error %}
+    <div class="alert alert-danger" role="alert">
+      {{ error }}
+    </div>
+  {% endif %}
+  
+  <!-- Formulario para crear un nuevo blog -->
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group mb-3">
+      <label for="id_title">Título:</label>
+      {{ form.title|add_class:"form-control" }}
+    </div>
+    <div class="form-group mb-3">
+      <label for="id_content">Contenido:</label>
+      {{ form.content|add_class:"form-control" }}
+    </div>
+    <div class="form-group mb-3">
+      <label for="id_subtitle">Subtítulo:</label>
+      {{ form.subtitle|add_class:"form-control" }}
+    </div>
+    <div class="form-group mb-3">
+      <label for="id_content2">Contenido2:</label>
+      {{ form.content2|add_class:"form-control" }}
+    </div>
+    <button type="submit" class="btn btn-primary">Publicar Blog</button>
+  </form>
+</div>
 {% endblock %}

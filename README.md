@@ -26,6 +26,7 @@ Project to practice Django/Python
     py -m venv venv
     .\venv\Scripts\activate
     py -m pip install django
+    py -m pip install django-widget-tweaks
     ```
 
 3.  **Inicia el proyecto**

@@ -1,6 +1,48 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
-  <h1>Home</h1>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae consequatur deleniti reprehenderit veniam id, animi nihil debitis ullam obcaecati? Ex sequi veniam tempora facere ut omnis eveniet! Officiis veritatis commodi dolorem rerum enim obcaecati nemo in nihil tenetur nisi repellat architecto ab deserunt illum, porro amet, pariatur quidem placeat? Distinctio vero excepturi sit perferendis, voluptate ratione eos libero cupiditate ea suscipit molestias provident autem nulla quos veniam repudiandae cum, doloremque possimus. Maiores optio, qui reiciendis cum ad beatae atque officiis deleniti voluptate fugiat quod vitae nesciunt iure, saepe minus obcaecati? Inventore totam debitis hic perferendis. Sunt ut accusamus quo beatae?</p>
+<div class="container mt-5 mb-5">
+  <div class="text-center mb-4">
+    <img src="{% static 'media/logoUES.png' %}" alt="Logo de la Universidad" class="mb-3" style="width: 150px;">
+    <h1 class="h3">UNIVERSIDAD DE EL SALVADOR</h1>
+    <h2 class="h4">FACULTAD DE INGENIERÍA Y ARQUITECTURA</h2>
+    <h3 class="h5">ESCUELA DE SISTEMAS INFORMÁTICOS</h3>
+    <h4 class="h6">HERRAMIENTAS DE PRODUCTIVIDAD</h4>
+  </div>
+  
+  <div class="border-top pt-3">
+    <h2 class="h5 text-center font-weight-bold">Tema: “Efectos de la pandemia en el aumento de enfermedades crónicas en el país”.</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <p><strong>Instructor:</strong> Ing. Oscar Díaz.</p>
+        <p><strong>Grupo de Tutoría:</strong> 4</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <p><strong>Integrantes:</strong></p>
+        <ul class="list-unstyled">
+          <li>Hernández Castillo, Josué Gerardo</li>
+          <li>Gálvez Rodas, Jennyfer Alexandra</li>
+          <li>Canales López, Carlos Enrique</li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <p><strong>Carnet:</strong></p>
+        <ul class="list-unstyled">
+          <li>HC16007</li>
+          <li>GR22078</li>
+          <li>CL21005</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <p>Ciudad Universitaria, (Pendiente) de Abril de 2024</p>
+  </div>
+</div>
 {% endblock %}

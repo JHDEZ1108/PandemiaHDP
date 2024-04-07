@@ -1,21 +1,48 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="blog-list">
-    <h1>Blogs</h1>
-    <!-- Lista de Blogs -->
+<style>
+  /* Estilos personalizados */
+  .card-title a {
+    color: inherit; /* Hereda el color del texto donde se encuentra */
+    text-decoration: none; /* Elimina el subrayado */
+  }
+
+  .edit-button {
+    text-decoration: none; /* Elimina el subrayado */
+    display: inline-block;
+    color: #fff; /* Color de texto */
+    background-color: #007bff; /* Fondo azul, puedes cambiarlo */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de texto */
+  }
+</style>
+<div class="container mt-4">
+  <h1 class="text-center mb-4">Blogs</h1>
+  <!-- Lista de Blogs -->
+  <div class="row">
     {% for blog in blogs %}
-      <div class="blog-summary">
-        <h2><a href="{% url 'blog_detail' blog_id=blog.id %}">{{ blog.title }}</a></h2>
-        <h3>{{ blog.subtitle }}</h3>
-        <p>Publicado el {{ blog.created|date:"d/m/Y" }} por {{ blog.user.username }}</p>
-        <!-- Botón de Editar visible solo para superusuarios -->
-        {% if request.user.is_superuser %}
-          <a href="{% url 'update_blog' blog_id=blog.id %}">Editar</a>
-        {% endif %}
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><a href="{% url 'blog_detail' blog_id=blog.id %}">{{ blog.title }}</a></h5>
+          <p class="card-subtitle mb-2 text-muted">{{ blog.content|truncatechars:50 }}</p>
+          <p class="card-text" style="text-align: right; font-weight: bold;">
+            <small>Publicado el {{ blog.created|date:"d/m/Y" }} por {{ blog.user.username }}</small>
+          </p>          
+          <!-- Botón de Editar visible solo para superusuarios -->
+          {% if request.user.is_superuser %}
+            <a href="{% url 'update_blog' blog_id=blog.id %}" class="edit-button" >Editar</a>
+          {% endif %}
+        </div>
       </div>
+    </div>
     {% empty %}
+    <div class="col-12">
       <p>No hay blogs para mostrar.</p>
+    </div>
     {% endfor %}
   </div>
+</div>
 {% endblock %}
