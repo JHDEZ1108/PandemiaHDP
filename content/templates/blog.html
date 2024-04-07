@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% block content %}
   <div class="blog-list">
     <h1>Blogs</h1>
@@ -8,10 +9,13 @@
         <h2><a href="{% url 'blog_detail' blog_id=blog.id %}">{{ blog.title }}</a></h2>
         <h3>{{ blog.subtitle }}</h3>
         <p>Publicado el {{ blog.created|date:"d/m/Y" }} por {{ blog.user.username }}</p>
+        <!-- Botón de Editar visible solo para superusuarios -->
+        {% if request.user.is_superuser %}
+          <a href="{% url 'update_blog' blog_id=blog.id %}">Editar</a>
+        {% endif %}
       </div>
     {% empty %}
       <p>No hay blogs para mostrar.</p>
     {% endfor %}
   </div>
 {% endblock %}
-

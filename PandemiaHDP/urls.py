@@ -28,6 +28,8 @@ urlpatterns = [
     # Asegúrate de pasar 'blog_id' como parte de la URL para 'create_comment'
     path('blog/<int:blog_id>/createcomment/', views.create_comment, name='create_comment'),
     path('blog/<int:blog_id>/', views.blog_detail, name='blog_detail'),  # Detalles de un blog específico
-    path('blog/create/', views.create_blog, name='create_blog'),    
+    path('blog/create/', views.create_or_update_blog, name='create_blog'),
+    path('blog/<int:blog_id>/update/', views.create_or_update_blog, name='update_blog'),
+
 ]
 

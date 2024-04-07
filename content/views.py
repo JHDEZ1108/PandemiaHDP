@@ -83,20 +83,32 @@ def blog_detail(request, blog_id):
     comments = blog.comments.all()  # Utiliza el related_name para obtener todos los comentarios asociados
     return render(request, 'blog_detail.html', {'blog': blog, 'comments': comments})
 
-def create_blog(request):
-    if request.method == 'GET':
-        return render(request, 'create_blog.html', {
-            'form': BlogForm()  # Inicializa un formulario vacío
-        })
-    else:
-        form = BlogForm(request.POST)
-        if form.is_valid():
-            new_blog = form.save(commit=False)
-            new_blog.user = request.user  # Asigna el usuario actual como el autor del blog
-            new_blog.save()
-            return redirect('blog_detail', blog_id=new_blog.id)  # Redirige a la vista detallada del nuevo blog
+def create_or_update_blog(request, blog_id=None):
+    template_name = 'create_blog.html'  # Plantilla predeterminada para crear un nuevo blog
+
+    if blog_id:
+        blog = get_object_or_404(Blog, pk=blog_id, user=request.user)  # Asegura que solo el autor pueda editar
+        template_name = 'update_blog.html'  # Cambia la plantilla para actualizar un blog existente
+        if request.method == 'POST':
+            form = BlogForm(request.POST, instance=blog)
+            if form.is_valid():
+                updated_blog = form.save()
+                return redirect('blog_detail', blog_id=updated_blog.id)
         else:
-            return render(request, 'create_blog.html', {
-                'form': BlogForm(),  # Devuelve el formulario con errores
-                'error': 'Error al crear el blog'
-            })
+            form = BlogForm(instance=blog)
+    else:
+        blog = None
+        if request.method == 'POST':
+            form = BlogForm(request.POST)
+            if form.is_valid():
+                new_blog = form.save(commit=False)
+                new_blog.user = request.user
+                new_blog.save()
+                return redirect('blog_detail', blog_id=new_blog.id)
+        else:
+            form = BlogForm()
+
+    return render(request, template_name, {
+        'form': form,
+        'blog': blog  # Pasar el blog al contexto puede ser útil
+    })

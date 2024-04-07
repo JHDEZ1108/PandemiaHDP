@@ -15,6 +15,12 @@
         <a href="/blog">Blog</a>
       </li>
       {% if user.is_authenticated %}
+      <!-- Opción visible solo para superusuarios -->
+      {% if user.is_superuser %}
+      <li>
+        <a href="/blog/create/">Crear Blog</a>
+      </li>
+      {% endif %}
       <li>
         <a href="/logout">Logout</a>
       </li>
@@ -26,7 +32,6 @@
         <a href="/signin">Login</a>
       </li>
       {% endif %}
-      
     </ul>
   </nav>
   
