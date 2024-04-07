@@ -1,4 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
   <h1>Blog</h1> 
+  <p>
+    {% lorem 4 p random %}
+  </p>
+  
+  <ul>
+    {% for comment in comments%}
+      <li>
+        <p><strong>{{comment.user.username}}</strong></p>
+        <p>{{comment.content}}</p>
+        <p>{{comment.likes}}</p>
+        <p>{{comment.created}}</p>
+      </li>
+    {% endfor%}
+  </ul>
 {% endblock %}

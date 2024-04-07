@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from .forms import CommentForm
+from .models import Comment
 
 
 # Create your views here.
@@ -37,7 +38,9 @@ def signup(request):
 
 
 def blog(request):
-    return render(request, 'blog.html')
+    # comments = Comment.objects.filter(user=request.user, created__isnull=True)
+    comments = Comment.objects.all()
+    return render(request, 'blog.html', {'comments': comments})
 
 
 def signout(request):
@@ -58,7 +61,6 @@ def signin(request):
         return redirect('blog')
 
 def create_comment(request):
-    
     if request.method == 'GET':
         return render(request, 'create_comment.html', {
             'form': CommentForm
