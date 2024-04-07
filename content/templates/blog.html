@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-  <h1>Blog</h1> 
-  <p>
-    {% lorem 4 p random %}
-  </p>
-  
-  <ul>
-    {% for comment in comments%}
-      <li>
-        <p><strong>{{comment.user.username}}</strong></p>
-        <p>{{comment.content}}</p>
-        <p>{{comment.likes}}</p>
-        <p>{{comment.created}}</p>
-      </li>
-    {% endfor%}
-  </ul>
+  <div class="blog-list">
+    <h1>Blogs</h1>
+    <!-- Lista de Blogs -->
+    {% for blog in blogs %}
+      <div class="blog-summary">
+        <h2><a href="{% url 'blog_detail' blog_id=blog.id %}">{{ blog.title }}</a></h2>
+        <h3>{{ blog.subtitle }}</h3>
+        <p>Publicado el {{ blog.created|date:"d/m/Y" }} por {{ blog.user.username }}</p>
+      </div>
+    {% empty %}
+      <p>No hay blogs para mostrar.</p>
+    {% endfor %}
+  </div>
 {% endblock %}
+

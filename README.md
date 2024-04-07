@@ -33,3 +33,10 @@ Project to practice Django/Python
     ```sh
     py manage.py runserver
     ```
+    
+4.  **EXTRA: Algunos comandos importantes**
+    ```sh
+    py manage.py createsuperuser
+    py manage.py makemigrations 
+    py manage.py migrate 
+    ```

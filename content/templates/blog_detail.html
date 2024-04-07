@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="blog_detail">
+    <!-- Detalles del Blog -->
+    <h1>{{ blog.title }}</h1> <!-- Título del Blog -->
+    <h2>{{ blog.subtitle }}</h2> <!-- Subtítulo -->
+    <p>{{ blog.content }}</p> <!-- Contenido -->
+    <p>{{ blog.content2 }}</p> <!-- Contenido 2 -->
+    <p>Publicado el {{ blog.created|date:"d/m/Y" }} por {{ blog.user.username }}</p> <!-- Fecha de creación y autor -->
+
+    <!-- Comentarios -->
+    <h3>Comentarios:</h3>
+    <ul>
+      {% for comment in comments %}
+        <li>
+          <p><strong>{{ comment.user.username }}</strong> dijo:</p>
+          <p>{{ comment.content }}</p>
+          <p>Likes: {{ comment.likes }}</p>
+          <p>Comentado el {{ comment.created|date:"d/m/Y H:i" }}</p>
+        </li>
+      {% empty %}
+        <li>No hay comentarios aún.</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

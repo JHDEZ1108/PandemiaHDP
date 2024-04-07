@@ -22,9 +22,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('signup/', views.signup, name='signup'),
-    path('blog/', views.blog, name='blog'),
+    path('blog/', views.blog, name='blog'),  # Lista de blogs
     path('logout/', views.signout, name='logout'),
     path('signin/', views.signin, name='signin'),
-    path('blog/createcomment', views.create_comment, name='create_comment')
-    
+    # Asegúrate de pasar 'blog_id' como parte de la URL para 'create_comment'
+    path('blog/<int:blog_id>/createcomment/', views.create_comment, name='create_comment'),
+    path('blog/<int:blog_id>/', views.blog_detail, name='blog_detail'),  # Detalles de un blog específico
 ]
+
