@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /* Estilos personalizados */
+  h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+  }
+  body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; 
+  }
+  .apartado p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; /* Añadir un espacio entre el título y el párrafo */
+  }
+  .enfermedades-container img {
+    display: block; /* Permite aplicar márgenes automáticos para centrar */
+    margin: auto; /* Centra horizontalmente */
+    max-width: 1000%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-bottom: 20px; /* Agrega un espacio debajo de la imagen */
+  }
+</style>
+
+<div class="container mt-4">
+  <div class="enfermedades-container">
+    <h1 class="text-center mb-4">INSUFICIENCIA CARDIACA(IC)</h1>
+        <img src="/static/media/cardiaca.jpg" alt="imagen">
+        <p>
+            La insuficiencia cardíaca se produce cuando el músculo cardíaco no bombea sangre de la manera que debería. Cuando esto sucede, 
+            la sangre a menudo retrocede y el líquido se puede acumular en los pulmones, lo que causa falta de aliento. Algunas afecciones 
+            cardíacas progresivamente dejan el corazón demasiado débil o rígido como para llenarse y bombear sangre de forma apropiada. 
+            Estas afecciones incluyen arterias estrechas en el corazón y presión arterial alta.n tratamiento adecuado puede mejorar los 
+            síntomas de la insuficiencia cardíaca y puede ayudar a algunas personas a vivir más tiempo. Los cambios en el estilo de vida 
+            pueden mejorar la calidad de vida. Intenta perder peso, hacer ejercicio, consumir menos sal y controlar el estrés.
+        </p> 
+        <p>
+            La insuficiencia cardíaca puede ser mortal. Las personas con insuficiencia cardíaca pueden tener síntomas graves. Algunas personas 
+            pueden necesitar un trasplante de corazón o un dispositivo que ayude al corazón a bombear sangre.La insuficiencia cardíaca se denomina 
+            a veces insuficiencia cardíaca congestiva.
+        </p>
+        <p><strong>SÍNTOMAS:</strong></p>
+        <p>
+            Cuando tienes insuficiencia cardíaca, el corazón no puede bombear suficiente sangre para satisfacer las necesidades del cuerpo.
+            Los síntomas pueden desarrollarse lentamente. A veces, los síntomas de la insuficiencia cardíaca comienzan repentinamente. Algunos 
+            síntomas de la insuficiencia cardíaca son los siguientes:
+        </p>
+        <p>&bull; Falta de aire durante una actividad o cuando estás acostado.</p>
+        <p>&bull; Fatiga y debilidad.</p>
+        <p>&bull; Hinchazón en las piernas, en los tobillos y en los pies.</p>
+        <p>&bull; Latidos del corazón rápidos o irregulares.</p>
+        <p>&bull; Menor capacidad para hacer ejercicio.</p>
+        <p>&bull; Sibilancia.</p>
+        <p>&bull; Tos que no desaparece o tos con mucosidad de color blanca o rosa y puntos de sangre.</p>
+        <p>&bull; Hinchazón del abdomen.</p>
+        <p>&bull; Aumento de peso muy rápido debido a la acumulación de líquidos.</p>
+        <p>&bull; Náuseas y falta de apetito.</p>
+        <p>&bull; Dificultad para concentrarse o menor estado de alerta.</p>
+        <p>&bull; Dolor en el pecho si la insuficiencia cardíaca es producto de un ataque cardíaco.</p>
+        <p><strong>CAUSAS:</strong></p>
+        <p>
+            La insuficiencia cardíaca se puede producir a causa de un corazón debilitado, dañado o rígido.
+        </p>
+        <p>
+            &bull; Si el corazón está dañado o debilitado, las cavidades cardíacas pueden estirarse y aumentar de tamaño. 
+            El corazón no puede bombear la cantidad de sangre necesaria.
+        </p>
+        <p>
+            &bull; Si las principales cavidades de bombeo del corazón, denominadas ventrículos, están rígidas, no pueden 
+            llenarse con suficiente sangre entre latidos.
+        </p>
+        <p>
+            Ciertas infecciones, el consumo excesivo de alcohol, el consumo de drogas ilícitas y algunos medicamentos de 
+            quimioterapia pueden dañar el músculo cardíaco. Los genes también pueden influir. Cualquiera de las siguientes 
+            afecciones puede dañar o debilitar el corazón y causar insuficiencia cardíaca.
+        </p>
+        <p>
+            <strong>Enfermedad de las arterias coronarias y ataque cardíaco:</strong>La enfermedad de las arterias coronarias es la causa más frecuente de insuficiencia 
+            cardíaca. Esta enfermedad se desarrolla por la acumulación de depósitos de grasa en las arterias. Los depósitos 
+            estrechan las arterias. Esto reduce el flujo sanguíneo y puede derivar en un ataque cardíaco.Un ataque cardíaco 
+            se produce súbitamente cuando una arteria que irriga el corazón se obstruye por completo. Los daños que un ataque 
+            cardíaco produce en el músculo cardíaco pueden ocasionar que el corazón ya no pueda bombear de la forma correcta.
+        </p>
+        <p>
+            &bull; <strong>Enfermedad de las válvulas cardíacas: </strong> Las válvulas del corazón hacen que la sangre fluya en la dirección correcta. Si una válvula no 
+            funciona correctamente, el corazón debe realizar un esfuerzo mayor para bombear la sangre. Esto puede debilitar al corazón con el tiempo. El tratamiento de 
+            algunos tipos de problemas en las válvulas cardíacas puede revertir la insuficiencia cardíaca.
+        </p>
+        <p>
+            &bull; <strong>Inflamación del músculo cardíaco, también llamada miocarditis: </strong> Su causa más frecuente es un virus, incluido el virus de la COVID-19, 
+            y puede derivar en insuficiencia cardíaca izquierda.
+        </p>
+        <p>
+            &bull; <strong>Algún problema cardíaco de nacimiento, también llamado defecto cardíaco congénito: </strong> Si el corazón y sus cavidades o válvulas no se han 
+            formado correctamente, las otras partes del corazón deben realizar un esfuerzo mayor para bombear la sangre. Esto puede derivar en insuficiencia cardíaca.
+        </p>
+        <p>
+            &bull; <strong>Ritmo cardíaco irregular, conocido como arritmia: </strong> Los ritmos cardíacos irregulares pueden hacer que el corazón lata demasiado rápido, 
+            lo que genera un esfuerzo adicional en este órgano. Una frecuencia cardíaca lenta también puede derivar en insuficiencia cardíaca. Tratar el ritmo cardíaco 
+            irregular puede revertir la insuficiencia cardíaca en algunas personas.
+        </p>
+        <p>
+            &bull; <strong>Otras enfermedades: </strong> Algunas enfermedades crónicas pueden contribuir a la insuficiencia cardíaca crónica. Algunos ejemplos son la diabetes, 
+            la infección por el VIH, una tiroides hiperactiva o hipoactiva o una acumulación de hierro o proteínas.
+        </p>
+        <p>Las causas de la insuficiencia cardíaca repentina también incluyen las siguientes:</p>
+        <p>&bull; Reacciones alérgicas.</p>
+        <p>&bull; Todo tipo de enfermedad que afecte a todo el cuerpo.</p>
+        <p>&bull; Coágulos de sangre en los pulmones.</p>
+        <p>&bull; Infecciones graves.</p>
+        <p>&bull; Uso de determinados medicamentos.</p>
+        <p>&bull; Virus que atacan al músculo cardíaco.</p>
+        <p>
+            La insuficiencia cardíaca suele comenzar en la cavidad cardíaca inferior izquierda, llamada ventrículo izquierdo. Esta es la principal cavidad cardíaca de bombeo. 
+            Sin embargo, la insuficiencia cardíaca también puede afectar el lado derecho. La cavidad cardíaca inferior derecha se denomina ventrículo derecho. A veces, 
+            la insuficiencia cardíaca afecta a ambos lados del corazón.
+        </p>
+        <p><strong>FACTORES DE RIESGO:</strong></p>
+        <P>Las siguientes son algunas de las enfermedades y afecciones que aumentan el riesgo de insuficiencia cardíaca:</P>
+        <p>
+            &bull; <strong>Enfermedad de las arterias coronarias: </strong> Las arterias estrechadas pueden limitar el suministro de sangre rica en oxígeno del corazón, 
+            lo que genera que el músculo cardíaco se debilite.
+        </p>
+        <p>
+            &bull; <strong>Ataque cardíaco: </strong> Un ataque cardíaco es una forma de enfermedad de las arterias coronarias que ocurre repentinamente. El daño al 
+            músculo cardíaco a causa de un ataque cardíaco puede ocasionar que el corazón ya no pueda bombear de la forma correcta.
+        </p>
+        <p>
+            &bull; <strong>Enfermedad de las válvulas cardíacas: </strong> Tener una válvula cardíaca que no funciona correctamente aumenta el riesgo de insuficiencia 
+            cardíaca.
+        </p>
+        <p>
+            &bull; <strong>Presión arterial alta: </strong> El corazón se esfuerza más de lo que debería cuando la presión arterial es alta.
+        </p>
+        <p>
+            &bull; <strong>Latidos del corazón irregulares: </strong> Los latidos irregulares, en especial si son muy frecuentes y rápidos, pueden debilitar el músculo 
+            cardíaco y causar insuficiencia cardíaca.
+        </p>
+        <p>
+            &bull; <strong>Enfermedad cardíaca congénita: </strong> Algunas personas que desarrollan insuficiencia cardíaca nacieron con problemas que afectan la estructura 
+            o función del corazón.
+        </p>
+        <p>
+            &bull; <strong>Diabetes: </strong> Tener diabetes aumenta el riesgo de tener presión arterial alta y enfermedad de las arterias coronarias.
+        </p>
+        <p>
+            &bull; <strong>Apnea del sueño: </strong> Esta incapacidad para respirar adecuadamente durante el sueño ocasiona un nivel bajo de oxígeno en la sangre y un mayor 
+            riesgo de latidos cardíacos irregulares. Ambos problemas pueden debilitar el corazón.
+        </p>
+        <p>
+            &bull; <strong>Obesidad: </strong> Las personas que padecen obesidad tienen un mayor riesgo de presentar insuficiencia cardíaca.
+        </p>
+        <p>
+            &bull; <strong>Infecciones virales: </strong> Algunas infecciones virales pueden dañar el músculo cardíaco.
+        </p>
+        <p>Entre los medicamentos que pueden aumentar el riesgo de insuficiencia cardíaca se incluyen los siguientes:</p>
+        <p>
+            &bull; <strong>Algunos medicamentos para la diabetes: </strong> Se ha descubierto que los medicamentos para la diabetes rosiglitazona (Avandia) y pioglitazona (Actos) 
+            aumentan el riesgo de sufrir insuficiencia cardíaca en algunas personas. No dejes de tomar estos medicamentos sin primero hablar con el proveedor de atención médica. 
+        </p>
+        <p>
+            &bull; <strong>Otros medicamentos: </strong> Otros medicamentos que pueden llevar a una insuficiencia cardíaca o a problemas de corazón son los medicamentos antiinflamatorios 
+            no esteroides (AINE) y algunos medicamentos que se usan para tratar la presión arterial alta, el cáncer, las afecciones sanguíneas, los latidos cardíacos irregulares, las 
+            enfermedades del sistema nervioso, las afecciones de salud mental, los problemas pulmonares y urinarios y las infecciones
+        </p>
+        <p>Otros factores de riesgo de la insuficiencia cardíaca son los siguientes:</p>
+        <p>
+            &bull; <strong>Envejecimiento: </strong> La capacidad de funcionamiento del corazón disminuye con la edad, incluso en las personas sanas.
+        </p>
+        <p>
+            &bull; <strong>Consumo de alcohol: </strong> Beber demasiado alcohol puede debilitar el músculo cardíaco y llevar a una insuficiencia cardíaca.
+        </p>
+        <p>
+            &bull; <strong>Fumar o consumir tabaco: </strong> Si fumas, deja de hacerlo. El uso de tabaco incrementa el riesgo de sufrir enfermedades cardíacas e insuficiencia cardíaca.
+        </p>
+        <p><strong>COMPLICACIONES:</strong></p>
+        <p>
+            Si tienes insuficiencia cardíaca, es importante hacer controles médicos con regularidad, incluso si los síntomas mejoran. El proveedor de atención médica puede examinarte y 
+            hacer pruebas para saber si hay complicaciones. Las complicaciones de la insuficiencia cardíaca dependen de la edad, tu salud general y la gravedad de la enfermedad cardíaca 
+            y pueden incluir los siguientes:
+        </p>
+        <p>
+            &bull; <strong>Daño o insuficiencia renal: </strong> La insuficiencia cardíaca puede reducir el flujo sanguíneo a los riñones. Si no se trata, puede causar insuficiencia renal. 
+            El daño renal a causa de la insuficiencia cardíaca puede requerir diálisis como tratamiento.
+        </p>
+        <p>
+            &bull; <strong>Otros problemas cardíacos: </strong> La insuficiencia cardíaca puede causar cambios en el tamaño y el funcionamiento del corazón. Estos cambios pueden dañar las 
+            válvulas cardíacas y ocasionar latidos irregulares
+        </p>
+        <p>
+            &bull; <strong>Daño hepático: </strong> La insuficiencia cardíaca puede causar una acumulación de líquido que ejerce demasiada presión sobre el hígado. Esto puede llevar a la 
+            formación de cicatrices, lo que dificulta más que el hígado funcione de manera adecuada.
+        </p>
+        <p>
+            &bull; <strong>Muerte cardíaca súbita: </strong> Si el corazón es débil, hay un riesgo de muerte súbita debido a un ritmo cardíaco irregular peligroso.
+        </p>
+        <p><strong>PREVENCIÓN:</strong></p>
+        <p>
+            Una forma de prevenir la insuficiencia cardíaca es tratar y controlar las afecciones que pueden causarla. Entre estas afecciones se incluyen la enfermedad de las arterias coronarias, 
+            la presión arterial alta, la diabetes y la obesidad. Algunos de los mismos cambios en el estilo de vida que se usan para controlar la insuficiencia cardíaca también pueden ayudar a 
+            prevenirla. Prueba estos consejos saludables para el corazón:
+        </p>
+        <p>&bull; No fumes.</p>
+        <p>&bull; Haz mucho ejercicio.</p>
+        <p>&bull; Come alimentos saludables.</p>
+        <p>&bull; Mantén un peso saludable.</p>
+        <p>&bull; Reduce y controla el estrés.</p>
+        <p>&bull; Toma los medicamentos según lo indicado.</p>
+  </div>
+</div>
+</div>
+{% endblock %}
