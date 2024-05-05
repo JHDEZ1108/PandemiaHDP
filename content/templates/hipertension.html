@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /* Estilos personalizados */
+  h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+  }
+  body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; 
+  }
+  .apartado p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; /* Añadir un espacio entre el título y el párrafo */
+  }
+  .enfermedades-container img {
+    display: block; /* Permite aplicar márgenes automáticos para centrar */
+    margin: auto; /* Centra horizontalmente */
+    max-width: 1000%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-bottom: 20px; /* Agrega un espacio debajo de la imagen */
+  }
+</style>
+
+<div class="container mt-4">
+  <div class="enfermedades-container">
+    <h1 class="text-center mb-4">HIPERTENSIÓN</h1>
+        <img src="/static/media/hipertension.jpg" alt="imagen">
+        <p>
+          La presión arterial alta es una enfermedad común que afecta a las arterias del cuerpo. También se conoce como hipertensión. 
+          Si tienes la presión arterial alta, la fuerza que ejerce la sangre contra las paredes de las arterias es muy alta constantemente. 
+          El corazón debe trabajar más para bombear sangre. La presión arterial se mide en milímetros de mercurio (mm Hg). En general, 
+          la hipertensión se corresponde con una lectura de la presión arterial de 130/80 milímetros de mercurio o superior.
+        </p> 
+        <p>
+            &bull; <strong>Presión arterial normal:</strong> La presión arterial es menos de 120/80 milímetros de mercurio.
+        </p>
+        <p>
+          &bull; <strong>Presión arterial alta:</strong> El valor máximo se sitúa de 120 a 129 milímetros de mercurio y el valor mínimo 
+          está por debajo (no por encima) de 80 milímetros de mercurio.
+        </p>
+        <p>
+          &bull; <strong>Hipertensión de etapa 1:</strong> El valor máximo va de 130 a 139 milímetros de mercurio y el valor mínimo está 
+          entre 80 y 89 milímetros de mercurio.
+        </p>
+        <p>
+          &bull; <strong>Hipertensión de etapa 2:</strong> El valor máximo es de 140 milímetros de mercurio o superior y el valor mínimo 
+          es de 90 milímetros de mercurio o superior..
+        </p>
+        <p>
+          La presión arterial superior a 180/120 milímetros de mercurio se considera crisis hipertensiva o crisis. Busca atención médica 
+          de emergencia si alguien tiene estos valores de presión arterial. La presión arterial alta no tratada aumenta el riesgo de ataque 
+          cardíaco, accidente cerebrovascular y otros problemas de salud graves. Es importante controlar la presión arterial al menos cada 
+          dos años a partir de los 18. Algunas personas necesitan controles con mayor frecuencia.
+        </p>
+        <p>
+          Hábitos de estilo de vida saludables, como no fumar, hacer ejercicio y comer bien, pueden ayudar a prevenir y tratar la presión 
+          arterial alta. Algunas personas necesitan medicamentos para tratar la presión arterial alta.
+        </p>
+        <p><strong>SÍNTOMAS:</strong></p>
+        <p> 
+          La mayoría de las personas con presión arterial alta no tienen síntomas, incluso si las lecturas de presión arterial alcanzan 
+          niveles peligrosamente altos. Se puede tener presión arterial alta durante años sin presentar ningún síntoma.
+        </p>
+        <p>
+          Algunas personas con hipertensión arterial pueden presentar lo siguiente:
+        </p>
+        <p>&bull; Dolores de cabeza</p>
+        <p>&bull; Falta de aire</p>
+        <p>&bull; Sangrados nasales</p>
+        <p><strong>CAUSAS:</strong></p>
+        <p>
+          La presión arterial se determina por dos cosas: la cantidad de sangre que bombea el corazón y cuán difícil es para la sangre 
+          circular por las arterias. Cuanta más sangre bombee el corazón y cuanto más estrechas sean las arterias, mayor será la presión 
+          arterial.
+        </p>
+        <p> Existen dos tipos principales de presión arterial alta.</p>
+        <p>
+          &bull; <strong>Hipertensión primaria (hipertensión esencial):</strong> Para la mayoría de los adultos, no hay una causa 
+          identificable de la presión arterial alta. Este tipo de presión arterial alta se denomina hipertensión primaria o esencial 
+          y tiende a desarrollarse progresivamente a lo largo de muchos años. La acumulación de placa en las arterias (ateroesclerosis) 
+          aumenta el riesgo de tener presión arterial alta.
+        </p>
+        <p>
+          &bull; <strong>Hipertensión secundaria:</strong> Este tipo de presión arterial alta se debe a una afección subyacente. Tiende 
+          a aparecer repentinamente y causa una presión arterial más alta que la hipertensión primaria. Los trastornos y medicamentos 
+          que pueden llevar a la hipertensión arterial secundaria incluyen los siguientes:
+        </p>
+        <p>&bull; Tumores de la glándula suprarrenal</p>
+        <p>&bull; Problemas en los vasos sanguíneos presentes al nacer, también llamados defectos cardíacos congénitos</p>
+        <p>&bull; Medicamentos para la tos y el resfriado, algunos analgésicos, píldoras anticonceptivas y otros medicamentos de venta con receta médica</p>
+        <p>&bull; Drogas ilícitas, como la cocaína y las anfetaminas</p>
+        <p>&bull; Enfermedad renal</p>
+        <p>&bull; Apnea obstructiva del sueño</p>
+        <p>&bull; Problemas de tiroides</p>
+        <p>A veces, un simple chequeo médico lleva al el aumento de la presión arterial. Esto se denomina hipertensión de bata blanca.</p>
+        <p><strong>FACTORES DE RIESGO:</strong></p>
+        <p>
+          Hay muchos factores de riesgo que pueden causar presión arterial alta, como los siguientes:
+        </p> 
+        <p>
+          &bull; <strong>Edad:</strong> El riesgo de tener presión arterial alta aumenta con la edad. Hasta aproximadamente los 64 años, la presión arterial 
+          alta es más frecuente en los hombres. Las mujeres tienen más probabilidades de desarrollar presión arterial alta después de los 65 años.
+        </p>
+        <p>
+          &bull; <strong>Raza:</strong> La presión arterial alta es particularmente común en las personas de piel negra. Aparece a una edad más temprana en 
+          las personas de piel negra que en las de piel blanca. 
+        </p>
+        <p>
+          &bull; <strong>Antecedentes familiares:</strong> Tienes más probabilidades de desarrollar presión arterial alta si tu padre, tu madre o algún hermano 
+          presenta esta afección.
+        </p>
+        <p>
+          &bull; <strong>Obesidad o sobrepeso:</strong> El exceso de peso provoca cambios en los vasos sanguíneos, los riñones y otras partes del cuerpo. Estos 
+          cambios suelen aumentar la presión arterial. Tener sobrepeso u obesidad también aumenta el riesgo de presentar una enfermedad cardíaca y los factores 
+          de riesgo correspondientes, como el colesterol alto.
+        </p>
+        <p>
+          &bull; <strong>Falta de ejercicio:</strong> No hacer ejercicio puede causar un aumento de peso. El aumento de peso eleva el riesgo de tener presión 
+          arterial alta. Las personas que no hacen actividad física suelen tener una frecuencia cardíaca más elevada.
+        </p>
+        <p>
+          &bull; <strong>Consumo de tabaco o vapeo:</strong> Fumar, mascar tabaco o vapear aumenta inmediatamente la presión arterial durante un breve período. 
+          Fumar tabaco daña las paredes de los vasos sanguíneos y acelera el proceso de endurecimiento de las arterias. Si fumas, pide a tu proveedor de atención 
+          médica que te brinde estrategias para ayudarte a dejar de fumar.
+        </p>
+        <p>
+          &bull; <strong>Demasiada sal:</strong> El exceso de sal (también denominada sodio) en el cuerpo puede provocar la retención de líquidos. Esto aumenta la 
+          presión arterial.
+        </p>
+        <p>
+          &bull; <strong>Niveles bajos de potasio:</strong> El potasio ayuda a equilibrar la cantidad de sal en las células del cuerpo. Un equilibrio correcto de potasio es 
+          importante para una buena salud cardíaca. Los niveles bajos de potasio pueden deberse a una falta de potasio en la dieta o a determinadas enfermedades, 
+          incluida la deshidratación.
+        </p>
+        <p>
+          &bull; <strong>Consumo excesivo de alcohol:</strong> Se ha asociado el consumo de alcohol con la presión arterial elevada, especialmente en hombres.
+        </p>
+        <p>
+          &bull; <strong>Estrés:</strong> Los niveles altos de estrés pueden llevar a un aumento temporal de la presión arterial. Los hábitos relacionados con el estrés, 
+          como comer en exceso, consumir tabaco o beber alcohol, pueden aumentar aún más la presión arterial.
+        </p>
+        <p>
+          &bull; <strong>Ciertas afecciones crónicas:</strong> La enfermedad renal, la diabetes y la apnea del sueño son algunas de las enfermedades que pueden llevar a 
+          la presión arterial alta.
+        </p>
+        <p>
+          &bull; <strong>Embarazo:</strong> A veces, el embarazo puede causar presión arterial alta.
+        </p>
+        <p>
+          La presión arterial alta es más común en adultos. No obstante, los niños también pueden tener una presión arterial alta. En el caso de algunos niños, la presión 
+          arterial alta puede deberse a problemas en los riñones o en el corazón. Sin embargo, para una cantidad cada vez mayor de niños, los malos hábitos del estilo de 
+          vida, como una alimentación poco saludable y la falta de ejercicio, contribuyen a que tengan presión arterial alta.
+        </p>
+        <p><strong>COMPLICACIONES:</strong></p>
+        <p>
+          El exceso de presión en las paredes de las arterias que provoca la presión arterial alta puede dañar los vasos sanguíneos y los órganos del cuerpo. Cuanto más 
+          alta sea la presión arterial y más tiempo pase sin controlarse, mayor será el daño.
+        </p>
+        <p>La presión arterial alta no controlada puede llevar a complicaciones como las siguientes:</p> 
+        <p>
+          &bull; <strong>Ataque cardíaco o accidente cerebrovascular:</strong> El endurecimiento y el engrosamiento de las arterias debido a la presión arterial alta o 
+          a otros factores puede derivar en un ataque cardíaco, un accidente cerebrovascular u otras complicaciones.
+        </p>
+        <p>
+          &bull; <strong>Aneurisma:</strong> El aumento de la presión arterial puede causar el debilitamiento de los vasos sanguíneos 
+          y la aparición de protuberancias en ellos, lo que provoca la formación de un aneurisma. Si un aneurisma se rompe, puede poner en riesgo la vida.
+        </p>
+        <p>
+          &bull; <strong>Insuficiencia cardíaca:</strong> Cuando la presión arterial es alta, el corazón tiene que trabajar más para bombear la sangre. La distensión causa que las 
+          paredes de la cavidad de bombeo del corazón se engrosen. Esta afección se denomina hipertrofia ventricular izquierda. Finalmente, el corazón no puede bombear 
+          suficiente sangre para satisfacer las necesidades del cuerpo, lo que provoca una insuficiencia cardíaca.
+        </p>
+        <p>
+          &bull; <strong>Problemas renales:</strong> La presión arterial alta puede provocar el estrechamiento o debilitamiento de los vasos sanguíneos de los riñones. Esto puede 
+          derivar en daños en los riñones.
+        </p>
+        <p>
+          &bull; <strong>Problemas oculares:</strong> El aumento de la presión arterial puede provocar el engrosamiento, el estrechamiento o la rotura de los vasos sanguíneos de 
+          los ojos. Esto puede ocasionar la pérdida de la visión.
+        </p>
+        <p>
+          &bull; <strong>Síndrome metabólico:</strong> Este síndrome cosiste en un conjunto de trastornos del metabolismo. Consiste en la descomposición irregular del azúcar, 
+          también denominado glucosa. El síndrome incluye un aumento del tamaño de la cintura, niveles altos de triglicéridos, disminución de los niveles de colesterol de 
+          lipoproteínas de alta densidad (colesterol HDL o bueno), presión arterial alta y niveles elevados de glucosa en la sangre. Estas afecciones pueden incrementar las 
+          posibilidades de que tengas diabetes, una enfermedad cardíaca y un accidente cerebrovascular. 
+        </p>
+        <p>
+          &bull; <strong>Cambios en la memoria o la comprensión:</strong> La presión arterial alta no controlada también puede afectar a la capacidad para pensar, recordar y 
+          aprender.
+        </p>
+        <p>
+          &bull; <strong>Demencia:</strong> El estrechamiento o la obstrucción de las arterias puede limitar el flujo sanguíneo al cerebro. Esto puede provocar un tipo 
+          determinado de demencia, denominado demencia vascular. Un accidente cerebrovascular que interrumpe el flujo sanguíneo hacia el cerebro también puede provocar 
+          demencia vascular.
+        </p>
+  </div>
+</div>
+</div>
+{% endblock %}
