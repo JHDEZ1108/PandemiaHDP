@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /* Estilos personalizados */
+  h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+  }
+  body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; 
+  }
+  .apartado p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; /* Añadir un espacio entre el título y el párrafo */
+  }
+  .enfermedades-container img {
+    display: block; /* Permite aplicar márgenes automáticos para centrar */
+    margin: auto; /* Centra horizontalmente */
+    max-width: 1000%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-bottom: 20px; /* Agrega un espacio debajo de la imagen */
+  }
+</style>
+
+<div class="container mt-4">
+  <div class="enfermedades-container">
+    <h1 class="text-center mb-4">COLESTEROL ALTO</h1>
+        <img src="/static/media/colesterol.jpg" alt="imagen">
+        <p>
+            El colesterol es una sustancia cerosa que se encuentra en la sangre. El cuerpo necesita colesterol para formar 
+            células sanas, pero tener altos niveles de colesterol puede aumentar el riesgo de sufrir una enfermedad cardíaca.
+            Con el colesterol alto, es posible que se te formen depósitos grasos en los vasos sanguíneos. Con el tiempo, estos
+            depósitos crecen y hacen que sea más difícil que fluya suficiente sangre a través de las arterias. A veces, esos 
+            depósitos pueden romperse de repente y formar un coágulo que causa un ataque cardíaco o un accidente cerebrovascular.
+        </p> 
+        <p>
+            El colesterol alto puede heredarse, aunque suele ser el resultado de la elección de un estilo de vida poco saludable, 
+            por lo que se puede prevenir y tratar. Llevar una dieta saludable, hacer ejercicio con regularidad y, a veces, tomar 
+            medicamentos pueden ayudar a reducir el colesterol alto.
+        </p>
+        <p><strong>CAUSAS:</strong></p>
+        <p>
+            El colesterol se trasporta en la sangre, adherido a las proteínas. Esta combinación de proteínas y colesterol se llama 
+            lipoproteína. Existen diferentes tipos de colesterol, que dependen de qué trasporta la lipoproteína. Ellos son:
+        </p>
+        <p>
+            &bull; <strong>Lipoproteína de baja densidad (LDL): </strong> El colesterol LDL, o “malo”, trasporta las partículas de 
+            colesterol por todo el cuerpo. El colesterol LDL se acumula en las paredes de las arterias, lo que genera su endurecimiento 
+            y estrechamiento.
+        </p>
+        <p>
+            &bull; <strong>Lipoproteínas de alta densidad (HDL): </strong> El colesterol HDL, o “bueno”, recoge el exceso de colesterol
+            y lo lleva de nuevo al hígado.
+        </p>
+        <p>
+            El perfil lipídico, por lo general, también mide los triglicéridos, un tipo de grasa en la sangre. Tener un alto nivel de triglicéridos
+            también puede aumentar el riesgo de enfermedades cardíacas. Los factores que puedes controlar, tales como la inactividad, la obesidad y
+            una dieta no saludable, contribuyen a niveles nocivos de colesterol y triglicéridos. Quizás puedan influir también los factores que no 
+            puedes controlar. Por ejemplo, tu composición genética podría dificultarle a tu cuerpo la eliminación del colesterol LDL de la sangre o 
+            su descomposición en el hígado. 
+        </p>
+        <p> Entre las afecciones médicas que pueden causar niveles nocivos de colesterol, se incluyen las siguientes:</p>
+        <p>&bull; Enfermedad renal crónica</p>
+        <p>&bull; Diabetes</p>
+        <p>&bull; VIH o SIDA</p>
+        <p>&bull; Hipotiroidismo</p>
+        <p>&bull; Lupus</p>
+        <p>
+            Los niveles de colesterol también pueden empeorar con algunos tipos de medicamentos que puedes estar tomando para otros problemas de salud, 
+            como: 
+        </p>
+        <p>&bull; Acne</p>
+        <p>&bull; Cáncer</p>
+        <p>&bull; Presión arterial alta</p>
+        <p>&bull; VIH o SIDA</p>
+        <p>&bull; Ritmos cardíacos irregulares</p>
+        <p>&bull; Trasplantes de órganos</p>
+        <p><strong>FACTORES DE RIESGO:</strong></p>
+        <p>
+            &bull; <strong>Mala alimentación: </strong> Comer demasiada grasa saturada o grasas trans puede dar lugar a niveles de colesterol poco sanos. 
+            Las grasas saturadas se encuentran en cortes de carne grasos y productos lácteos no descremados. Las grasas trans por lo general se encuentran 
+            en refrigerios empaquetados o postres.
+        </p>
+        <p>
+            &bull; <strong>Obesidad: </strong> Tener un índice de masa corporal (IMC) de 30 o más aumenta el riesgo de tener colesterol alto.
+        </p>
+        <p>
+            &bull; <strong>Falta de ejercicio: </strong>  El ejercicio ayuda a aumentar el HDL del cuerpo, que es el colesterol “bueno”.
+        </p>
+        <p>
+            &bull; <strong>Tabaquismo: </strong> Fumar cigarrillos puede bajar el nivel de HDL o colesterol “bueno”.
+        </p>
+        <p>
+            &bull; <strong>Alcohol: </strong> Beber demasiado alcohol puede aumentar el nivel de colesterol total.
+        </p>
+        <p>
+            &bull; <strong>Edad: </strong> Incluso los niños pequeños puede tener niveles de colesterol poco sanos, pero es mucho más común en las personas
+            de más de 40. A medida que envejeces, el hígado puede cada vez menos eliminar el colesterol LDL.
+        </p>
+        <p><strong>COMPLICACIONES:</strong></p>
+        <p>
+            El colesterol alto puede producir una peligrosa acumulación de colesterol y otros depósitos en las paredes de las arterias (ateroesclerosis). 
+            Estos depósitos (placas) pueden reducir el flujo sanguíneo a través de las arterias, lo que puede provocarte complicaciones tales como:
+        </p>
+        <p>
+            &bull; Dolor en el pecho. Si las arterias que suministran sangre al corazón (arterias coronarias) se ven afectadas, podrías sufrir dolor en el 
+            pecho (angina de pecho) y otros síntomas de enfermedad de las arterias coronarias.
+        </p>
+        <p>
+            &bull; <strong>Ataque cardíaco: </strong> Si las plaquetas se desgarran o se rompen, puede formarse un coágulo sanguíneo en el sitio de rotura; 
+            este coágulo puede bloquear el flujo sanguíneo o desprenderse y taponar una arteria. Si se suspende el flujo sanguíneo a una parte de tu corazón, 
+            tendrás un ataque cardíaco.
+        </p>
+        <p>
+            &bull; <strong>Accidente cerebrovascular: </strong> De manera similar a un ataque cardíaco, un accidente cerebrovascular se produce cuando se 
+            bloquea el flujo sanguíneo a una parte del cerebro debido a un coágulo sanguíneo.
+        </p>
+        <p><strong>PREVENCIÓN:</strong></p>
+        <p>
+            Los cambios de estilo de vida saludable para el corazón que pueden reducir el colesterol son los mismos que los que pueden ayudar a que no tengas 
+            colesterol alto, en primer lugar. Para ayudar a prevenir el colesterol alto, puedes hacer lo siguiente:
+        </p>
+        <p>&bull; Sigue una dieta baja en sal, que ponga énfasis en el consumo de frutas, vegetales y cereales integrales</p>
+        <p>&bull; Limita la cantidad de grasas de origen animal y usa las grasas buenas con moderación</p>
+        <p>&bull; Baja de peso y mantén un peso saludable</p>
+        <p>&bull; Dejar de fumar</p>
+        <p>&bull; Realiza ejercicio la mayoría de los días de la semana durante, por lo menos, treinta minutos</p>
+        <p>&bull; Si bebes alcohol, hazlo con modernación</p>
+        <p>&bull; Controlar el estrés</p>
+  </div>
+</div>
+</div>
+{% endblock %}
