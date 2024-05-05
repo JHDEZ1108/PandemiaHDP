@@ -115,3 +115,27 @@ def create_or_update_blog(request, blog_id=None):
         'form': form,
         'blog': blog  # Pasar el blog al contexto puede ser útil
     })
+def hipertension(request):
+    return render(request, 'hipertension.html')
+def colesterol(request):
+    return render(request, 'colesterol.html')
+def artritis(request):
+    return render(request, 'artritis.html')
+def renal(request):
+    return render(request, 'renal.html')
+def cardiaca(request):
+    return render(request, 'cardiaca.html')
+def alzheimer(request):
+    return render(request, 'alzheimer.html')
+def cancer(request):
+    return render(request, 'cancer.html')
+def asma(request):
+    return render(request, 'asma.html')
+def diabetes(request):
+    return render(request, 'diabetes.html')
+def vih(request):
+    return render(request, 'vih.html')
+def EPOC(request):
+    return render(request, 'EPOC.html')
+def epilepsia(request):
+    return render(request, 'epilepsia.html')
