@@ -3,6 +3,20 @@
 {% load widget_tweaks %}
 
 {% block content %}
+<style>
+  body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; 
+}
+h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+    text-align: center;
+  }
+</style>
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-6 offset-md-3">
@@ -34,3 +48,4 @@
   </div>
 </div>
 {% endblock %}
+
