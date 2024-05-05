@@ -3,46 +3,74 @@
 {% load static %}
 
 {% block content %}
+<style>
+    header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px; 
+}
+h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+    text-align: center;
+    margin-top: -140px;
+  }
+.mb-3 {
+    width: 600px; 
+    margin-top: -90px; 
+    margin-right: 20px; 
+    margin-left: 20px; 
+}
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+main section p {
+    text-align: justify; 
+    text-justify: inter-word; 
+}
+body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; 
+    background-position: center; 
+}
+</style>
+
 <div class="container mt-5 mb-5">
   <div class="text-center mb-4">
-    <img src="{% static 'media/logoUES.png' %}" alt="Logo de la Universidad" class="mb-3" style="width: 150px;">
-    <h1 class="h3">UNIVERSIDAD DE EL SALVADOR</h1>
-    <h2 class="h4">FACULTAD DE INGENIERÍA Y ARQUITECTURA</h2>
-    <h3 class="h5">ESCUELA DE SISTEMAS INFORMÁTICOS</h3>
-    <h4 class="h6">HERRAMIENTAS DE PRODUCTIVIDAD</h4>
-  </div>
-  
-  <div class="border-top pt-3">
-    <h2 class="h5 text-center font-weight-bold">Tema: “Efectos de la pandemia en el aumento de enfermedades crónicas en el país”.</h2>
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-6">
-        <p><strong>Instructor:</strong> Ing. Oscar Díaz.</p>
-        <p><strong>Grupo de Tutoría:</strong> 4</p>
-      </div>
-    </div>
-
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-4">
-        <p><strong>Integrantes:</strong></p>
-        <ul class="list-unstyled">
-          <li>Hernández Castillo, Josué Gerardo</li>
-          <li>Gálvez Rodas, Jennyfer Alexandra</li>
-          <li>Canales López, Carlos Enrique</li>
-        </ul>
-      </div>
-      <div class="col-md-2">
-        <p><strong>Carnet:</strong></p>
-        <ul class="list-unstyled">
-          <li>HC16007</li>
-          <li>GR22078</li>
-          <li>CL21005</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="text-center mt-5">
-    <p>Ciudad Universitaria, (Pendiente) de Abril de 2024</p>
+    <img src="{% static 'media/logo.png' %}" alt="Logo " class="mb-3">
   </div>
 </div>
+
+<header>
+    <h1>EFECTOS DE LA PANDEMIA EN EL AUMENTO DE ENFERMEDADES CRONICAS EN EL SALVADOR</h1>
+</header>
+<main>
+    <section>
+        <p>
+            La pandemia de COVID-19 ha traído consigo una transformación radical en el panorama de la salud en
+            El Salvador, lo que ha desencadenado un preocupante aumento en la incidencia de enfermedades crónicas
+            entre la población. Desde que se implementaron las medidas de confinamiento en marzo de 2020, el país
+            ha experimentado una serie de cambios que han impactado directamente en el bienestar físico y emocional
+            de sus habitantes. La combinación de estrés, cambios en los hábitos alimenticios, reducción de la actividad
+            física y dificultades para acceder a servicios médicos ha contribuido de manera significativa al deterioro 
+            de la salud en El Salvador. El impacto psicológico generado por la pandemia, junto con las deficiencias 
+            estructurales en el sistema de salud, ha exacerbado aún más la situación, creando un escenario de mayor
+            vulnerabilidad para la población.
+        </p>
+        <p> - Nuestro principal objetivo es proporcionar información esencial sobre el impacto de la pandemia en el aumento
+            de las enfermedades crónicas en El Salvador, y concientizar a la población sobre la importancia de este tema. 
+            A través del análisis de diversas fuentes confiables, buscamos fomentar la comprensión entre nuestros lectores
+            y proponer una serie de recomendaciones efectivas para prevenir las enfermedades crónicas.
+        </p> 
+    </section>
+</main>
+
 {% endblock %}
