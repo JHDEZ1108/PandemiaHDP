@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /* Estilos personalizados */
+  h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+  }
+  body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; 
+  }
+  .apartado p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; /* Añadir un espacio entre el título y el párrafo */
+  }
+  .enfermedades-container img {
+    display: block; /* Permite aplicar márgenes automáticos para centrar */
+    margin: auto; /* Centra horizontalmente */
+    max-width: 1000%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-bottom: 20px; /* Agrega un espacio debajo de la imagen */
+  }
+</style>
+
+<div class="container mt-4">
+  <div class="enfermedades-container">
+    <h1 class="text-center mb-4">CANCER</h1>
+        <img src="/static/media/cancer.jpg" alt="imagen">
+        <p>
+            El cáncer se refiere a cualquiera de un gran número de enfermedades que se caracterizan por el desarrollo de células anormales que se 
+            dividen sin control y tienen la capacidad de infiltrarse y destruir el tejido corporal normal. A menudo, el cáncer tiene la capacidad 
+            de propagarse por el cuerpo.El cáncer es la segunda causa principal de muerte en el mundo. Sin embargo, las tasas de supervivencia 
+            están aumentando en el caso de muchos tipos de cáncer, gracias a los avances en los exámenes de detección, los tratamientos y la 
+            prevención.
+        </p> 
+        <p><strong>SÍNTOMAS:</strong></p>
+        <p>
+            Los signos y síntomas causados por el cáncer varían según la parte del cuerpo afectada.
+            Algunos signos y síntomas generales asociados con el cáncer, pero no específicos de esta enfermedad, son los siguientes:
+        </p>
+        <p>&bull; Fatiga</p>
+        <p>&bull; Bulto o zona de engrosamiento que puede palparse debajo de la piel</p>
+        <p>&bull; Cambios de peso, como aumentos o pérdidas de peso no intencionales</p>
+        <p>&bull; Cambios en la piel, como pigmentación amarillenta, oscurecimiento o enrojecimiento de la piel, llagas que no se curan o cambios 
+        en los lunares existentes</p>
+        <p>&bull; Cambios en los hábitos de evacuación de la vejiga o los intestinos</p>
+        <p>&bull; Tos persistente o dificultad para respirar</p>
+        <p>&bull; Dificultad para tragar</p>
+        <p>&bull; Ronquera</p>
+        <p>&bull; Indigestión persistente o malestar después de comer</p>
+        <p>&bull; Dolor muscular o articular persistente, sin causa aparente</p>
+        <p>&bull; Fiebre o sudoraciones nocturnas persistentes, sin causa aparente</p>
+        <p>&bull; Sangrado o hematomas sin causa aparente</p>
+        <p><strong>CAUSAS:</strong></p>
+        <p>
+            El cáncer es ocasionado por cambios (mutaciones) en el ADN dentro de las células. El ADN que hay en una célula está dentro de un gran 
+            número de genes, cada uno de los cuales contiene un grupo de instrucciones que le indica a la célula qué funciones realizar, y cómo 
+            crecer y dividirse. Los errores en las instrucciones pueden provocar que la célula detenga su función normal y se convierta en una 
+            célula cancerosa.
+        </p>
+        <p><strong>¿Qué hacen las mutaciones genéticas?</strong></p>
+        <p>
+            Una mutación genética puede indicarle a una célula sana que haga lo siguiente:
+        </p>
+        <p>
+            &bull; <strong>Que permita un crecimiento acelerado.</strong> Una mutación genética puede indicarle a una célula que crezca y se divida 
+            con mayor rapidez. De esta forma, se crean muchas células nuevas que tienen la misma mutación.
+        </p>
+        <p>
+            &bull; <strong>Que no detenga el crecimiento descontrolado de las células.</strong>  Las células normales saben cuándo detener el crecimiento 
+            para que tengas la cantidad adecuada de cada tipo de célula. Las células cancerosas pierden los controles (genes supresores de tumores) que 
+            les indican cuándo detener el crecimiento. Una mutación en un gen supresor de tumores permite que las células cancerosas continúen creciendo 
+            y acumulándose.
+        </p>
+        <p>
+            &bull; <strong>Que cometa errores al reparar errores en el ADN.</strong> Los genes de reparación del ADN buscan errores en el ADN de las células 
+            y los corrigen. Una mutación en un gen de reparación del ADN puede implicar que no se corrijan otros errores, lo que transforma a las células en 
+            cancerosas.
+        </p>
+        <p>
+            Estas mutaciones son las que se encuentran con mayor frecuencia en el cáncer. Sin embargo, hay muchas otras mutaciones genéticas que pueden contribuir a provocar cáncer.
+        </p>
+        <p><strong>¿Qué causa las mutaciones genéticas?</strong></p>
+        <p>
+            Las mutaciones genéticas pueden ocurrir por diversas razones, por ejemplo, las siguientes:
+        </p>
+        <p>
+            &bull; <strong>Mutaciones genéticas de nacimiento.</strong> Es posible que nazcas con una mutación genética que heredas de tus padres. Este tipo de mutación representa un 
+            pequeño porcentaje de casos de cáncer.
+        </p>
+        <p>
+            &bull; <strong>Mutaciones genéticas que ocurren después del nacimiento.</strong> La mayoría de las mutaciones genéticas ocurren después del nacimiento y no son hereditarias.
+            Existen diversos factores que pueden ocasionar las mutaciones genéticas, entre ellos, fumar, la radiación, los virus, las sustancias químicas que producen cáncer (agentes 
+            cancerígenos), la obesidad, las hormonas, la inflamación crónica y la falta de ejercicio.
+        </p>
+        <p>
+            Las mutaciones genéticas ocurren con frecuencia durante el desarrollo normal de las células. Sin embargo, las células contienen un mecanismo que reconoce cuando ocurre un error 
+            y lo repara. Ocasionalmente, se pasa por alto un error. Esto podría ocasionar que una célula se convierta en cancerosa
+        </p>
+        <p><strong>¿Cómo interactúan entre sí las mutaciones genéticas?</strong></p>
+        <p>
+            Las mutaciones genéticas de nacimiento y las que se adquieren a lo largo de la vida trabajan juntas para provocar cáncer. Por ejemplo, si heredas una mutación genética que te 
+            predispone al cáncer, eso no implica con certeza que vayas a tener cáncer. En cambio, es posible que sean necesarias una o más mutaciones genéticas para provocar cáncer. Es 
+            posible que la mutación genética hereditaria te haga más propenso que otras personas a padecer cáncer cuando te expongas a determinadas sustancias que lo provocan.
+        </p>
+        <p>
+            No queda claro cuántas mutaciones deben acumularse para que se forme cáncer. Es probable que esto varíe entre los diferentes tipos de cáncer.
+        </p>
+        <p><strong>FACTORES DE RIESGO:</strong></p>
+        <p> Si bien los médicos tienen una idea de lo que puede aumentar el riesgo de cáncer, la mayoría de los casos de cáncer ocurren en personas que no tienen factores de riesgo conocidos. 
+            Entre los factores conocidos que aumentan el riesgo de cáncer, se incluyen los siguientes:</p>
+        <p> &bull; <strong>La edad </strong> </p>
+        <p>
+            El cáncer puede tardar décadas en manifestarse. Es por eso que la mayoría de las personas con diagnóstico de cáncer tienen 65 años o más. Si bien es más común en los adultos mayores, 
+            el cáncer no es una enfermedad exclusivamente de adultos, sino que puede diagnosticarse a cualquier edad.
+        </p>
+        <p> &bull; <strong>Los hábitos</strong> </p>
+        <p>
+            Se sabe que algunos estilos de vida aumentan el riesgo de padecer cáncer. Fumar, beber más de una copa de alcohol por día en el caso de las mujeres y hasta dos copas por día en el 
+            caso de los hombres, la exposición excesiva al sol o las quemaduras por el sol frecuentes con ampollas, tener obesidad y tener sexo sin protección pueden contribuir a causar cáncer.
+            Puedes cambiar estos hábitos para disminuir el riesgo de padecer cáncer, aunque algunos hábitos son más fáciles de cambiar que otros.
+        </p>
+        <p> &bull; <strong>Tus antecedentes familiares</strong> </p>
+        <p>
+            Solo una pequeña parte de los casos de cáncer se debe a una afección hereditaria. Si el cáncer es frecuente en tu familia, es posible que haya mutaciones que pasen de una generación a 
+            la siguiente. Puedes ser un candidato para análisis genéticos a fin de determinar si tienes mutaciones hereditarias que puedan aumentar el riesgo de padecer determinados tipos de cáncer. 
+            Ten en cuenta que una mutación genética hereditaria no necesariamente significa que tendrás cáncer.
+        </p>
+        <p> &bull; <strong>Tus afecciones médicas</strong> </p>
+        <p>
+            Algunas afecciones médicas crónicas, como la colitis ulcerosa, pueden aumentar notablemente el riesgo de padecer algunos tipos de cáncer. Habla con el médico sobre tus riesgos.
+        </p>
+        <p> &bull; <strong>El entorno</strong> </p>
+        <p>
+            Es posible que el ambiente que te rodea contenga sustancias químicas perjudiciales que pueden aumentar el riesgo de cáncer. Aunque no fumes, puedes inhalar humo de segunda mano si estás 
+            en un lugar donde las personas fuman o si vives con un fumador. Las sustancias químicas en casa o en el lugar de trabajo, como el amianto y el benceno, también se asocian con un mayor
+            riesgo de cáncer.
+        </p>
+        <p><strong>PREVENCIÓN:</strong></p>
+        <p>
+            Los médicos han identificado varias maneras de reducir el riesgo de padecer cáncer, como las siguientes:    
+        </p>
+        <p>
+            &bull; <strong>Dejar de fumar.</strong> Si fumas, deja de hacerlo. Si no fumas, no empieces a hacerlo ahora. Fumar está relacionado con distintos tipos de cáncer, no solo con el cáncer 
+            de pulmón. Dejarlo ahora reducirá el riesgo de padecer cáncer en el futuro.
+        </p>
+        <p>
+            &bull; <strong>Evitar la exposición excesiva al sol.</strong>  Los rayos ultravioleta (UV) dañinos del sol pueden aumentar el riesgo de padecer cáncer de piel. Limita tu exposición al 
+            sol quedándote en la sombra, usando ropa de protección y aplicándote protector solar.
+        </p>
+        <p>
+            &bull; <strong>Seguir una dieta saludable.</strong> Elige una dieta rica en frutas y verduras. Elige cereales integrales y proteínas magras. Limita el consumo de carnes procesadas.
+        </p>
+        <p>
+            &bull; <strong>Hacer ejercicio la mayoría de los días de la semana.</strong> El ejercicio regular está relacionado con un bajo riesgo de cáncer. Intenta hacer por lo menos 30 minutos 
+            de ejercicio la mayoría de los días de la semana. Si no has estado realizando ejercicios con frecuencia, comienza de a poco y aumenta progresivamente hasta llegar a los 30 minutos o más.
+        </p>
+        <p>
+            &bull; <strong>Mantener un peso saludable.</strong>Tener sobrepeso u obesidad incrementa el riesgo de padecer cáncer. Intenta lograr y mantener un peso saludable mediante una combinación 
+            de alimentación saludable y ejercicio regular. 
+        </p>
+        <p>
+            &bull; <strong>Beber alcohol con moderación, en caso de que bebas.</strong>  Si eliges beber alcohol, hazlo con moderación. En los adultos saludables, beber con moderación significa una 
+            copa al día en el caso de las mujeres y hasta dos copas al día en el caso de los hombres.
+        </p>
+        <p>
+            &bull; <strong>Programar exámenes para detectar el cáncer.</strong> Habla con el médico acerca de qué tipos de exámenes para la detección del cáncer son los más adecuados para ti en función 
+            de tus factores de riesgo.
+        </p>
+        <p>
+            &bull; <strong>Consultar con el médico sobre las vacunas.</strong> Algunos virus aumentan el riesgo de padecer cáncer. Algunas vacunas pueden ayudar a prevenir esos virus, incluido el que 
+            causa la hepatitis B, que aumenta el riesgo de cáncer de hígado, y el virus del papiloma humano, que aumenta el riesgo de cáncer del cuello del útero y de otros tipos de cáncer. Pregúntale 
+            al médico si las vacunas contra estos virus son adecuadas para ti.
+        </p>
+  </div>
+</div>
+</div>
+{% endblock %}
