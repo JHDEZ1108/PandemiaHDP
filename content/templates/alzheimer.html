@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /* Estilos personalizados */
+  h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+  }
+  body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; 
+  }
+  .apartado p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; /* Añadir un espacio entre el título y el párrafo */
+  }
+  .enfermedades-container img {
+    display: block; /* Permite aplicar márgenes automáticos para centrar */
+    margin: auto; /* Centra horizontalmente */
+    max-width: 1000%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-bottom: 20px; /* Agrega un espacio debajo de la imagen */
+  }
+</style>
+
+<div class="container mt-4">
+  <div class="enfermedades-container">
+    <h1 class="text-center mb-4">ENFERMEDAD DE ALZHEIMER</h1>
+        <img src="/static/media/alzheimer.jpg" alt="imagen">
+        <p>
+            La enfermedad de Alzheimer es un trastorno del cerebro que empeora con el tiempo. Se caracteriza por cambios en el cerebro que derivan 
+            en depósitos de ciertas proteínas. La enfermedad de Alzheimer hace que el cerebro se encoja y que las neuronas cerebrales, a la larga, 
+            mueran. La enfermedad de Alzheimer es la causa más común de demencia, un deterioro gradual en la memoria, el pensamiento, el comportamiento 
+            y las habilidades sociales. Estos cambios afectan la capacidad de funcionamiento de una persona. Unos 6,5 millones de personas de 65 años o 
+            más viven con enfermedad de Alzheimer. Entre ellos, más del 70 % tiene 75 años o más. De los casi 55 millones de personas con demencia en todo 
+            el mundo, se estima que entre el 60 % y el 70 % tiene la enfermedad de Alzheimer.
+        </p> 
+        <p>
+            Los signos tempranos de la enfermedad incluyen el olvido de eventos o conversaciones recientes. Con el tiempo, avanza hasta convertirse en un 
+            problema grave de la memoria y la pérdida de la capacidad para hacer las tareas cotidianas.Los medicamentos pueden mejorar los síntomas o retardar 
+            su progresión. Los programas y servicios pueden ayudar a brindar apoyo a las personas con enfermedad de Alzheimer y a sus cuidadores. No hay ningún 
+            tratamiento que cure la enfermedad de Alzheimer. En las etapas avanzadas, la pérdida grave de la función cerebral puede provocar deshidratación, 
+            desnutrición o infección. Estas complicaciones pueden provocar la muerte.
+        </p>
+        <p><strong>SÍNTOMAS:</strong></p>
+        <p>
+            La pérdida de memoria es el síntoma clave de la enfermedad de Alzheimer. Los primeros signos incluyen dificultad para recordar eventos o conversaciones 
+            recientes, pero la memoria empeora y se desarrollan otros síntomas a medida que la enfermedad avanza.
+        </p>
+        <p>
+            Al principio, es posible que alguien con la enfermedad reconozca problemas para recordar las cosas y pensar con claridad. A medida que los síntomas empeoran, 
+            hay más posibilidades de que un familiar o amigo note los problemas. Los cambios que la enfermedad de Alzheimer produce en el cerebro generan problemas cada 
+            vez mayores con lo siguiente:
+        </p>
+        <p><strong>MEMORIA:</strong></p>
+        <p>
+            Todas las personas tienen lagunas mentales por momentos, pero la pérdida de la memoria asociada con la enfermedad de Alzheimer persiste y empeora. Con el tiempo, 
+            la pérdida de la memoria afecta la capacidad de la persona para desenvolverse en el trabajo y en casa. Las personas con enfermedad de Alzheimer podrían pasar por 
+            las siguientes situaciones:
+        </p>
+        <p>&bull; Repetir afirmaciones y preguntas una y otra vez.</p>
+        <p>&bull; Olvidar conversaciones, citas médicas o eventos.</p>
+        <p>&bull; Extraviar artículos y, a menudo, ponerlos en lugares en los que no tiene sentido hacerlo.</p>
+        <p>&bull; Perderse en lugares que solían conocer bien.</p>
+        <p>&bull; Con el tiempo, olvidar los nombres de familiares y de objetos de uso cotidiano.</p>
+        <p>&bull; Tener problemas para encontrar el nombre adecuado de objetos, para expresar pensamientos o para participar en conversaciones.</p>
+        <p><strong>EL PENSAMIENTO Y EL RAZONAMIENTO:</strong></p>
+        <p>
+            La enfermedad de Alzheimer dificulta concentrarse y pensar, en especial sobre conceptos abstractos, como los números.Hacer más de una 
+            tarea a la vez resulta especialmente difícil. Gestionar la economía, poner al día las cuentas y pagar las facturas a tiempo puede ser 
+            complicado. A la larga, es posible que una persona con la enfermedad de Alzheimer no sea capaz de reconocer ni manejar los números.
+        </p>
+        <p><strong>HACER VALORACIONES Y TOMAR DECISIONES:</strong></p>
+        <p>
+            La enfermedad de Alzheimer provoca un deterioro en la capacidad de tomar decisiones y juicios razonables en situaciones cotidianas. 
+            Por ejemplo, la persona puede tomar malas decisiones en ámbitos sociales o usar ropa que no es adecuada para las condiciones climáticas. 
+            Puede que a algunos les resulte más difícil responder a los problemas cotidianos. Por ejemplo, es posible que la persona no sepa manipular
+            alimentos que se están cocinando en una hornalla ni tomar decisiones al conducir un vehículo.
+        </p>
+        <p><strong>PLANIFICAR Y REALIZAR ACTIVIDADES FAMILIARES:</strong></p>
+        <p>
+            La enfermedad de Alzheimer provoca un deterioro en la capacidad de tomar decisiones y juicios razonables en situaciones cotidianas. 
+            Por ejemplo, la persona puede tomar malas decisiones en ámbitos sociales o usar ropa que no es adecuada para las condiciones climáticas. 
+            Puede que a algunos les resulte más difícil responder a los problemas cotidianos. Por ejemplo, es posible que la persona no sepa manipular
+            alimentos que se están cocinando en una hornalla ni tomar decisiones al conducir un vehículo.
+        </p>
+        <p><strong>CAMBIOS EN LA PERSONALIDAD Y EN LA CONDUCTA:</strong></p>
+        <p>
+            Los cambios que la enfermedad de Alzheimer produce en el cerebro pueden afectar el estado de ánimo y el comportamiento. Los problemas 
+            pueden incluir lo siguiente:
+        </p>
+        <p>&bull; Depresión.</p>
+        <p>&bull; Pérdida de interés por actividades.</p>
+        <p>&bull; Aislamiento social.</p>        </p>
+        <p>&bull; Cambios del estado de ánimo.</p>
+        <p>&bull; Desconfianza de otras personas.</p>
+        <p>&bull; Ira o agresividad.</p>
+        <p>&bull; Cambios en los hábitos de sueño.</p>
+        <p>&bull; Desorientación.</p>
+        <p>&bull; Desinhibición.</p>
+        <p>&bull; Delirios, como creer que le han robado algo.</p>
+        <p><strong>CAUSAS:</strong></p>
+        <p>
+            Las causas exactas de la enfermedad de Alzheimer no se comprenden en su totalidad. Pero a un nivel básico, las proteínas del cerebro 
+            no funcionan de la forma habitual. Esto interrumpe el trabajo de las células cerebrales, llamadas neuronas, y desencadena una serie 
+            de eventos. Las neuronas se dañan y pierden las conexiones entre sí. Eventualmente, mueren.
+        </p>
+        <p>
+            Los científicos creen que, en la mayoría de los casos, la enfermedad de Alzheimer es consecuencia de una combinación de factores genéticos, 
+            ambientales y del estilo de vida que afectan el cerebro a lo largo del tiempo. En menos del 1 % de los casos, la enfermedad de Alzheimer 
+            ocurre por cambios genéticos específicos que prácticamente garantizan que una persona tendrá la enfermedad. En estos casos, la enfermedad 
+            generalmente comienza en la madurez.
+        </p>
+        <p>
+            El desarrollo de la enfermedad comienza años antes de que aparezcan los primeros síntomas. El daño comienza más a menudo en la región del 
+            cerebro que controla la memoria. La pérdida de neuronas se extiende en un patrón algo predecible a otras regiones del cerebro. En la etapa 
+            avanzada de la enfermedad, el tejido cerebral está considerablemente reducido.
+        </p>
+        <p>
+            Los investigadores que tratan de entender la causa de la enfermedad de Alzheimer se centran en el papel de dos proteínas:
+        </p>
+        <p>
+            &bull; <strong>Placas: </strong> El beta amiloide es un fragmento de una proteína más grande. Cuando estos fragmentos se agrupan, parecen 
+            tener un efecto tóxico en las neuronas e interrumpen la comunicación entre las neuronas cerebrales. Estos grupos forman depósitos más grandes 
+            llamados placas amiloides, que también incluyen otros desechos celulares.
+        </p>
+        <p>
+            &bull; <strong>Ovillos: </strong> Las proteínas tau juegan un papel en el sistema interno de apoyo y trasporte de las neuronas cerebrales para 
+            trasportar nutrientes y otros materiales esenciales. En la enfermedad de Alzheimer, las proteínas tau cambian de forma y se organizan en estructuras 
+            llamadas ovillos neurofibrilares. Los ovillos interrumpen el sistema de trasporte y provocan daños en las neuronas.
+        </p>
+        <p><strong>FACTORES DE RIESGO:</strong></p>
+        <p><strong>Edad</strong></p>
+        <p>
+            La edad avanzada es el factor de riesgo más importante para la enfermedad de Alzheimer. La enfermedad de Alzheimer no es parte del proceso normal de 
+            envejecimiento. Pero, al envejecer, aumentan las probabilidades de desarrollarla. Según un estudio, cada año hubo cuatro nuevos diagnósticos por cada 
+            1000 personas de 65 a 74 años. Entre las personas de 75 a 84 años, hubo 32 nuevos diagnósticos por cada 1000 personas. Para las personas de 85 años o 
+            más, hubo 76 nuevos diagnósticos por cada 1000 personas.
+        </p>
+        <p><strong>Consumo excesivo de alcohol</strong></p>
+        <p>
+            Se sabe desde hace tiempo que el consumo de grandes cantidades de alcohol ocasiona cambios en el cerebro. En varios estudios y revisiones grandes se 
+            determinó que los trastornos por el consumo de alcohol estaban relacionados con más riesgo para demencia, en particular, con la demencia de aparición 
+            temprana.
+        </p>
+        <p><strong>Patrones de sueño deficientes</strong></p>
+        <p>
+            Según las investigaciones, los patrones de sueño irregulares, como la dificultad para conciliar el sueño o permanecer dormido, se asocian con más riesgo 
+            para la enfermedad de Alzheimer.
+        </p>
+        <p><strong>Estilo de vida y salud del corazón</strong></p>
+        <p>
+            La investigación ha demostrado que los mismos factores de riesgo asociados con las enfermedades cardíacas pueden aumentar el riesgo de tener demencia. No 
+            está claro si estos factores aumentan el riesgo para demencia al empeorar los cambios de la enfermedad de Alzheimer en el cerebro o al provocar cambios 
+            vasculares en el cerebro. Entre estos, se incluyen los siguientes:
+        </p>
+        <p>&bull; Falta de ejercicio</p>
+        <p>&bull; Obesidad</p>
+        <p>&bull; Fumar o estar expuesto al humo de segunda mano</p>
+        <p>&bull; Presión arterial alta</p>
+        <p>&bull; Colesterol alto</p>
+        <p>&bull; Diabetes tipo 2 mal controlada</p>
+        <p>
+            Estos factores pueden modificarse. Por lo tanto, cambiar los hábitos del estilo de vida puede alterar el riesgo en un determinado grado. Por ejemplo, 
+            hacer ejercicio periódicamente y llevar una alimentación baja en grasas y rica en frutas y verduras se relacionan con un menor riesgo de tener enfermedad 
+            de Alzheimer.
+        </p>
+        <p><strong>PREVENCIÓN:</strong></p>
+        <p> 
+            La enfermedad de Alzheimer es una afección que no se puede prevenir. Sin embargo, se pueden modificar varios factores de riesgo en el estilo de vida.
+            Existe evidencia de que tomar medidas para reducir el riesgo para enfermedades cardiovasculares también puede disminuir el riesgo de demencia.
+        </p>
+        <p>
+            Estas son algunas opciones de un estilo de vida saludable para el corazón que se pueden seguir para reducir el riesgo de demencia:
+        </p>
+        <p>&bull; Hacer ejercicio con regularidad.</p>
+        <p>&bull; Llevar una alimentación de frutas y verduras frescas, aceites saludables y alimentos bajos en grasas saturadas, como la dieta mediterránea.</p>
+        <p>&bull; Seguir las pautas de tratamiento para controlar la hipertensión arterial, la diabetes y el colesterol alto</p>
+        <p>&bull; Si fumas, pide al profesional de atención médica que te ayude a dejar el hábito.</p>
+        <p>
+            En un estudio grande y prolongado que se hizo en Finlandia, se descubrió que los cambios en el estilo de vida ayudaban a reducir el deterioro cognitivo 
+            en personas que corrían el riesgo de tener demencia. Se impartió a los sujetos del estudio sesiones individuales y grupales centradas en alimentación, 
+            ejercicio y actividades sociales. En otro estudio que se llevó a cabo en Australia, a quienes corrían el riesgo de tener demencia les ofrecieron sesiones 
+            de asesoramiento sobre alimentación, ejercicio y otros cambios en el estilo de vida. Obtuvieron mejores resultados en las pruebas cognitivas después de uno, 
+            dos y tres años en comparación con quienes no recibieron el asesoramiento.
+        </p>
+        <p>
+            Otros estudios han demostrado que comprometerse mental y socialmente ayuda a conservar las habilidades de pensamiento en el futuro y disminuir el riesgo para 
+            la enfermedad de Alzheimer. Esto incluye participar en eventos sociales, leer, bailar, jugar juegos de mesa, realizar tareas artísticas, tocar un instrumento 
+            y otras actividades.
+        </p>
+        <p>
+            &bull; <strong>No Fumes: </strong> Fumar cigarrillos puede dañar tus riñones y empeorar el daño renal existente. Si eres fumador, habla con tu médico 
+            acerca de las estrategias para dejar de fumar.Los grupos de apoyo, el asesoramiento y los medicamentos pueden ayudarte a dejar de fumar.
+        </p>
+       
+</div>
+</div>
+{% endblock %}
