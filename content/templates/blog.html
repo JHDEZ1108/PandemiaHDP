@@ -17,9 +17,62 @@
     border-radius: 5px; /* Bordes redondeados */
     font-size: 14px; /* Tamaño de texto */
   }
+  h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio entre los cuadros de apartados */
+  }
+  .apartado {
+    width: 350px; /* Ancho del cuadro de apartado */
+    padding: 20px;
+    background-color: hsl(220, 16%, 96%); /* Color de fondo del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.1); /* Sombra */
+    display: flex; /* Hacer que los elementos dentro del apartado se coloquen en línea */
+    flex-direction: column; /* Alinear los elementos hijos verticalmente */
+    align-items: center; 
+    margin: 0 auto;
+  }
+  .enfermedades{
+    color: rgb(10, 10, 10); 
+    font-size: 25px; 
+    font-weight: bold;
+    text-align: center;
+  }
+  .apartado p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; /* Añadir un espacio entre el título y el párrafo */
+  }
+  .apartado img {
+    max-width: 250px; /* Establece el ancho máximo de la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+    margin-right: 20px;
+  }
+  body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; 
+  }
+  .enfermedades-container {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; 
+    margin-bottom: 20px; /* Espacio debajo del texto */
+  }
 </style>
+
 <div class="container mt-4">
-  <h1 class="text-center mb-4">Blogs</h1>
+  <div class="enfermedades-container">
+  <h1 class="text-center mb-4">ENFERMEDADES CRÓNICAS</h1>
   <!-- Lista de Blogs -->
   <div class="row">
     {% for blog in blogs %}
@@ -40,9 +93,118 @@
     </div>
     {% empty %}
     <div class="col-12">
-      <p>No hay blogs para mostrar.</p>
+      <P>
+        Las enfermedades crónicas son condiciones de salud que perduran durante largos periodos y suelen progresar lentamente. Este tipo
+        de enfermedades abarcan una amplia variedad, a pesar de los avances médicos en el tratamiento de los síntomas físicos, muchas personas
+        continúan enfrentando desafíos significativos en su salud mental y emocional.Las enfermedades crónicas tienden a concentrarse en ciertos 
+        grupos de personas, familias y comunidades,influenciadas por una interacción compleja entre factores genéticos y ambientales. Los hábitos
+        de vida poco saludables, como la mala alimentación, la falta de ejercicio y el tabaquismo, son determinantes clave en su desarrollo y progresión.
+        Abordar efectivamente estas enfermedades requiere un enfoque integral que combine la prevención, el tratamiento médico adecuado y el apoyo emocional
+        y psicológico para quienes las padecen.
+    </P>
+    <p>
+        También es crucial abordar los factores sociales y ambientales que contribuyen a su aparición y propagación
+        en las comunidades siendo más prevalentes en la vejez, y se estima que hasta el 80% de las personas mayores de 65 años tienen al menos una de estas
+        condiciones.
+    </p>
+ <div class="container-wrapper">
+    <div class="container">
+        <div class="apartado">
+            <a href="hipertension.html"tm class="enfermedades">HIPERTENSIÓN</a>
+            <img src="/static/media/hipertension.jpg" alt="imagen">
+            <p>
+              La presión arterial alta es una enfermedad común que afecta a las arterias del cuerpo. También se conoce como hipertensión. 
+              Si tienes la presión arterial alta, la fuerza que ejerce la sangre contra las paredes de las arterias es muy alta constantemente. 
+              El corazón debe trabajar más para bombear sangre...
+            </p>
+        </div>
+        <div class="apartado">
+            <a href="colesterol.html"tm class="enfermedades">COLESTEROL ALTO</a>
+            <img src="/static/media/colesterol.jpg" alt="imagen">
+            <p>
+              El colesterol es una sustancia cerosa que se encuentra en la sangre. El cuerpo necesita colesterol para formar 
+              células sanas, pero tener altos niveles de colesterol puede aumentar el riesgo de sufrir una enfermedad cardíaca.
+              Con el colesterol alto, es posible que se te formen depósitos grasos en los vasos sanguíneos....
+            </p>
+        </div>
+        <div class="apartado">
+            <a href="artritis.html"tm class="enfermedades">ARTRITIS</a>
+            <img src="/static/media/artritis.jpg" alt="imagen">
+            <p>a artritis es la hinchazón y la sensibilidad de una o más de las articulaciones. Los principales síntomas de la artritis
+              son dolor y rigidez de las articulaciones, que suelen empeorar con la edad. Los tipos más frecuentes de artritis son la 
+              artrosis y la artritis reumatoide....</p>
+        </div>
+        <div class="apartado">
+            <a href="renal.html"tm class="enfermedades">ENFERMEDAD RENAL CRÓNICA</a>
+            <img src="/static/media/renal.jpg" alt="imagen">
+            <p>La enfermedad renal crónica, también llamada insuficiencia renal crónica, implica una pérdida gradual de la función renal. 
+              Los riñones filtran los desechos y el exceso de líquidos de la sangre, que se eliminan a través de la orina. La enfermedad 
+              renal crónica avanzada puede provocar la acumulación de niveles peligrosos de líquido, electrolitos y desechos en el organismo.
+              En las etapas tempranas de la enfermedad renal crónica, puede que tengas pocos signos o síntomas...</p>
+        </div>
+        <div class="apartado">
+            <a href="cardiaca.html"tm class="enfermedades">INSUFICIENCIA CARDIACA(IC)</a>
+            <img src="/static/media/cardiaca.jpg" alt="imagen">
+            <p>La insuficiencia cardíaca se produce cuando el músculo cardíaco no bombea sangre de la manera que debería. Cuando esto sucede, 
+              la sangre a menudo retrocede y el líquido se puede acumular en los pulmones, lo que causa falta de aliento. Algunas afecciones 
+              cardíacas progresivamente dejan el corazón demasiado débil o rígido como para llenarse y bombear sangre de forma apropiada...</p>
+        </div>
+        <div class="apartado">
+            <a href="alzheimer.html"tm class="enfermedades">ALZHEIMER</a>
+            <img src="/static/media/alzheimer.jpg" alt="imagen">
+            <p>La enfermedad de Alzheimer es un trastorno del cerebro que empeora con el tiempo. Se caracteriza por cambios en el cerebro que derivan 
+              en depósitos de ciertas proteínas. La enfermedad de Alzheimer hace que el cerebro se encoja y que las neuronas cerebrales, a la larga, 
+              mueran. La enfermedad de Alzheimer es la causa más común de demencia, un deterioro gradual en la memoria, el pensamiento, el comportamiento 
+              y las habilidades sociales...</p>
+        </div>
+        <div class="apartado">
+            <a href="cancer.html"tm class="enfermedades">CANCER</a>
+            <img src="/static/media/cancer.jpg" alt="imagen">
+            <p>El cáncer se refiere a cualquiera de un gran número de enfermedades que se caracterizan por el desarrollo de células anormales que se 
+              dividen sin control y tienen la capacidad de infiltrarse y destruir el tejido corporal normal. A menudo, el cáncer tiene la capacidad 
+              de propagarse por el cuerpo.El cáncer es la segunda causa principal de muerte en el mundo...</p>
+        </div>
+        <div class="apartado">
+            <a href="asma.html"tm class="enfermedades">ASMA</a>
+            <img src="/static/media/asma.jpg" alt="imagen">
+            <p>El asma es una afección en la que las vías respiratorias se estrechan e hinchan, lo que puede producir mayor mucosidad. Esto puede dificultar 
+              la respiración y provocar tos, un silbido (sibilancia) al exhalar y falta de aire. Para algunas personas, el asma es una molestia menor. Para 
+              otras puede ser un problema considerable que interfiere en las actividades cotidianas y que puede producir ataques de asma que pongan en riesgo 
+              la vida...</p>
+        </div>
+        <div class="apartado">
+            <a href="diabetes.html"tm class="enfermedades">DIABETES</a>
+            <img src="/static/media/diabetes.jpg" alt="imagen">
+            <p> La diabetes mellitus se refiere a un grupo de enfermedades que afecta la forma en que el cuerpo utiliza la glucosa en la sangre. La glucosa es 
+              una importante fuente de energía para las células que forman los músculos y tejidos. También es la principal fuente de combustible del cerebro.
+              La causa principal de la diabetes varía según el tipo...</p>
+        </div>
+        <div class="apartado">
+            <a href="vih.html"tm class="enfermedades">VIH/SIDA</a>
+            <img src="/static/media/VIH-SIDA.jpg" alt=" imagen">
+            <p> El síndrome de inmunodeficiencia adquirida es una enfermedad crónica. La causa es el virus de la inmunodeficiencia humana o VIH. El VIH daña el sistema inmunitario, 
+              de modo que el organismo es menos capaz de combatir infecciones y enfermedades. Si no se trata el VIH, pueden pasar años antes de que debilite el sistema inmunitario 
+              lo suficiente como para convertirse en SIDA.El VIH se contagia por contacto con los genitales, por ejemplo, durante las relaciones sexuales sin preservativo...</p>
+        </div>
+        <div class="apartado">
+            <a href="EPOC.html"tm class="enfermedades">ENFERMEDAD PULMONAR OBSTRUCTIVA CRÓNICA(EPOC)</a>
+            <img src="/static/media/EPOC.jpg" alt=" imagen">
+            <p>La enfermedad pulmonar obstructiva crónica (EPOC) es una enfermedad pulmonar inflamatoria crónica que causa la obstrucción del flujo de aire 
+              de los pulmones. Los síntomas incluyen dificultad para respirar, tos, producción de moco (esputo) y sibilancias...</p>
+        </div>
+        <div class="apartado">
+            <a href="epilepsia.html"tm class="enfermedades">EPILEPSIA</a>
+            <img src="/static/media/epilepsia.jpg" alt=" imagen">
+            <p>La epilepsia, también conocida como trastorno convulsivo, es una afección cerebral que causa convulsiones recurrentes. Hay muchos tipos de epilepsia. 
+              En algunas personas, se puede identificar la causa. En otras, se desconoce la causa.La epilepsia es frecuente. Se estima que el 1,2 % de la población 
+              de los Estados Unidos tiene epilepsia activa, de acuerdo con los Centros para el Control y la Prevención de Enfermedades. La epilepsia afecta a personas 
+              de todos los sexos, razas, grupos étnicos y edades...</p>
+        </div>
+    </div>
+ </div>
     </div>
     {% endfor %}
+  </div>
   </div>
 </div>
 {% endblock %}
