@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /* Estilos personalizados */
+  h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+  }
+  body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; 
+  }
+  .apartado p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; /* Añadir un espacio entre el título y el párrafo */
+  }
+  .enfermedades-container img {
+    display: block; /* Permite aplicar márgenes automáticos para centrar */
+    margin: auto; /* Centra horizontalmente */
+    max-width: 1000%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-bottom: 20px; /* Agrega un espacio debajo de la imagen */
+  }
+</style>
+
+<div class="container mt-4">
+  <div class="enfermedades-container">
+    <h1 class="text-center mb-4">ASMA</h1>
+        <img src="/static/media/asma.jpg" alt="imagen">
+        <p>
+            El asma es una afección en la que las vías respiratorias se estrechan e hinchan, lo que puede producir mayor mucosidad. Esto puede dificultar 
+            la respiración y provocar tos, un silbido (sibilancia) al exhalar y falta de aire. Para algunas personas, el asma es una molestia menor. Para 
+            otras puede ser un problema considerable que interfiere en las actividades cotidianas y que puede producir ataques de asma que pongan en riesgo 
+            la vida.
+        </p> 
+        <p>
+            El asma no tiene cura, pero sus síntomas pueden controlarse. Dado que el asma suele cambiar con el tiempo, es importante que colabores con el 
+            médico para hacer un seguimiento de los signos y los síntomas y ajustar el tratamiento según sea necesario.
+        </p>
+        <p><strong>SÍNTOMAS:</strong></p>
+        <p>
+            Los síntomas del asma varían según la persona. Es posible que tengas ataques de asma con poca frecuencia, síntomas solamente en ciertos momentos, 
+            como cuando haces ejercicio, o síntomas en todo momento.            
+            Los signos y síntomas del asma comprenden:
+        </p>
+        <p>&bull; Falta de aire</p>
+        <p>&bull; Dolor u opresión del pecho</p>
+        <p>&bull; Sibilancias al exhalar, que es un signo común de asma en los niños</p>
+        <p>&bull; Problemas para dormir causados por falta de aliento, tos o sibilancia al respirar</p>
+        <p>&bull; Tos o sibilancia al respirar que empeora con un virus respiratorio, como un resfriado o gripe</p>
+        <p>Los signos que indican que probablemente el asma esté empeorando comprenden:</p>
+        <p>&bull; Signos y síntomas del asma que son más frecuentes y molestos</p>
+        <p>&bull; Dificultad creciente para respirar, medida con un dispositivo utilizado para comprobar el funcionamiento de los pulmones (medidor de flujo espiratorio)</p>
+        <p>&bull; Necesidad de usar un inhalador de alivio rápido con mayor frecuencia</p>
+        <p>Para algunas personas, los signos y síntomas del asma se exacerban en ciertas situaciones:</p>
+        <p>
+            &bull; <strong>Asma provocada por el ejercicio,</strong> que puede empeorar con el aire frío y seco
+        </p>
+        <p>
+            &bull; <strong>Asma provocada por el ejercicio,</strong>desencadenada por irritantes en el lugar de 
+            trabajo, como vapores químicos, gases o polvo
+        </p>
+        <p>
+            &bull; El <strong>asma inducida por la alergia,</strong> desencadenada por sustancias transportadas por el aire, como el polen, esporas de moho, residuos 
+            de cucarachas, o partículas de piel y saliva seca derramada por los animales domésticos (caspa de mascotas)
+        </p>
+        <p><strong>CAUSAS:</strong></p>
+        <p>
+            No está claro por qué algunas personas contraen asma y otras no; sin embargo, es probable que se deba a una combinación de factores ambientales y heredados (genéticos).
+        </p>
+        <p><strong>Desencadenantes del asma</strong></p>
+        <p>
+            La exposición a varios irritantes y a sustancias que desencadenan alergias (alérgenos) puede provocar signos y síntomas de asma. Los desencadenantes del asma varían de 
+            una persona a otra y pueden incluir los siguientes:
+        </p>
+        <p>&bull; Alérgenos aerotransportados, como el polen, los ácaros del polvo, las esporas de moho, la caspa de animales o las partículas de residuos de cucarachas</p>
+        <p>&bull; Infecciones respiratorias, como un resfriado común</p>
+        <p>&bull; Actividad física</p>
+        <p>&bull; Aire frío</p>
+        <p>&bull; Contaminantes del aire e irritantes, como el humo</p>
+        <p>&bull; Ciertos medicamentos, incluidos los betabloqueadores, la aspirina y los medicamentos antiinflamatorios no esteroideos, como el ibuprofeno (Advil, Motrin IB, otros) y 
+        el naproxeno sódico (Aleve)</p>
+        <p>&bull; Emociones fuertes y estrés</p>
+        <p>&bull; Sulfitos y conservantes añadidos a algunos tipos de alimentos y bebidas, entre ellos, camarones, frutas deshidratadas, papas procesadas, cerveza y vino</p>
+        <p>&bull; Enfermedad por reflujo gastroesofágico, un trastorno en el que los ácidos estomacales se acumulan en la garganta</p>
+        <p><strong>FACTORES DE RIESGO:</strong></p>
+        <p> 
+            Se cree que varios factores aumentan las probabilidades de tener asma. Por ejemplo:
+        </p>
+        <p> &bull; Tener un pariente consanguíneo con asma, como padre o hermano</p>
+        <p> &bull; Tener otra afección alérgica, como la dermatitis atópica, que provoca enrojecimiento y picazón de la piel, o la fiebre del heno, que causa goteo nasal, congestión y picazón en los ojos</p>
+        <p> &bull; Sobrepeso</p>
+        <p> &bull; Ser fumador</p>
+        <p> &bull; Exposición como fumador pasivo</p>
+        <p> &bull; Exposición a gases de escape o a otros tipos de contaminación</p>
+        <p> &bull; Exposición a desencadenantes en el ámbito laboral, como las sustancias químicas utilizadas en las industrias de la agricultura, la peluquería y la fabricación</p>
+        <p><strong>PREVENCIÓN:</strong></p>
+        <p>
+            Aunque no hay forma de prevenir el asma, tú y tu médico pueden diseñar un plan paso a paso para vivir con la enfermedad y prevenir los ataques de asma.   
+        </p>
+        <p>
+            &bull; <strong>Sigue un plan de acción para el asma.</strong> Con la ayuda del médico y del equipo de atención médica, redacta un plan detallado para tomar medicamentos y para controlar un ataque 
+            de asma. Luego asegúrate de seguir ese plan.El asma es una enfermedad permanente que requiere control y tratamiento regulares. Tener el tratamiento bajo control puede hacerte sentir que tienes más 
+            control de tu vida.
+        </p>
+        <p>
+            &bull; <strong>Vacúnate contra la gripe y contra la neumonía.</strong> Estar al día con las vacunas puede evitar que la gripe y la neumonía desencadenen brotes de asma.
+        </p>
+        <p>
+            &bull; <strong>Identifica y evita los desencadenantes del asma.</strong> Muchos alérgenos e irritantes del exterior (desde el polen y el moho hasta el aire frío y la contaminación atmosférica) pueden 
+            desencadenar ataques de asma. Descubre qué causa y empeora el asma y toma las medidas para evitar esos desencadenantes.
+        </p>
+        <p>
+            &bull; <strong>Controla tu respiración.</strong>Puedes aprender a reconocer los signos de advertencia de un ataque inminente, como tos leve, sibilancia al respirar o falta de aliento.
+            Sin embargo, debido a que la función pulmonar puede disminuir antes de que notes algún signo o síntoma, mide y registra regularmente el flujo de aire máximo con un medidor de flujo espiratorio en casa. 
+            Un medidor de flujo espiratorio mide la fuerza con la que puedes espirar. Tu médico puede mostrarte cómo controlar tu flujo espiratorio máximo en casa 
+        </p>
+        <p>
+            &bull; <strong>Identifica y trata los ataques a tiempo.</strong> Si actúas con rapidez, es menos probable que tengas un ataque grave. Tampoco necesitarás muchos medicamentos para controlar los síntomas.
+            Cuando las medidas de tu flujo espiratorio máximo disminuyan y te alerten sobre un ataque inminente, toma los medicamentos como se te ha indicado. Además, detén inmediatamente cualquier actividad que 
+            pueda haber desencadenado el ataque. Si no mejoran los síntomas, obtén ayuda médica tal como esté indicado en tu plan de acción.
+        </p>
+        <p>
+            &bull; <strong>Toma tus medicamentos según las indicaciones.</strong> No cambies tus medicamentos sin hablar primero con tu médico, incluso si tu asma parece estar mejorando. Es una buena idea llevar 
+            tus medicamentos a cada visita al médico. Tu médico puede asegurarse de que estás usando los medicamentos correctamente y tomando la dosis adecuada.
+        </p>
+        <p>
+            &bull; <strong>Presta atención al incremento en el uso del inhalador de alivio rápido.</strong> Si dependes del inhalador de alivio rápido, como salbutamol, esto significa que el asma no está bajo control. 
+            Consulta al médico sobre el ajuste del tratamiento.
+        </p>
+  </div>
+</div>
+</div>
+{% endblock %}
