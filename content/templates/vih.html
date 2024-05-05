@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /* Estilos personalizados */
+  h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+  }
+  body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; 
+  }
+  .apartado p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; /* Añadir un espacio entre el título y el párrafo */
+  }
+  .enfermedades-container img {
+    display: block; /* Permite aplicar márgenes automáticos para centrar */
+    margin: auto; /* Centra horizontalmente */
+    max-width: 1000%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-bottom: 20px; /* Agrega un espacio debajo de la imagen */
+  }
+</style>
+
+<div class="container mt-4">
+  <div class="enfermedades-container">
+    <h1 class="text-center mb-4">VIH/SIDA</h1>
+        <img src="/static/media/VIH-SIDA.jpg" alt="imagen">
+        <p>
+            El síndrome de inmunodeficiencia adquirida es una enfermedad crónica. La causa es el virus de la inmunodeficiencia humana o VIH. El VIH daña el sistema inmunitario, 
+            de modo que el organismo es menos capaz de combatir infecciones y enfermedades. Si no se trata el VIH, pueden pasar años antes de que debilite el sistema inmunitario 
+            lo suficiente como para convertirse en SIDA. El VIH se contagia por contacto con los genitales, por ejemplo, durante las relaciones sexuales sin preservativo. Este tipo 
+            de infección se conoce como infección de transmisión sexual. El VIH también se contagia por contacto con la sangre, por ejemplo, cuando se comparten agujas o jeringas. 
+            También es posible que una persona con VIH no tratado contagie el virus a su hijo durante el embarazo, cuando da a luz o durante la lactancia.
+        </p> 
+        <p>
+            No existe una cura para el VIH ni el SIDA. Sin embargo, los medicamentos pueden controlar la infección y evitar que la enfermedad empeore. Los tratamientos antivirales 
+            contra el VIH redujeron las muertes por SIDA en todo el mundo. Se está trabajando para que los países con menos recursos dispongan de más recursos para prevenir y tratar 
+            el VIH y el SIDA.
+        </p>
+        <p><strong>SÍNTOMAS:</strong></p>
+        <p>
+            Los síntomas del VIH y SIDA varían, según la persona y la etapa de la infección.
+        </p>
+        <p><strong>Infección primaria o VIH agudo</strong></p>
+        <p>
+            Algunas personas infectadas con el VIH contraen una enfermedad parecida a la gripe en un plazo de 2 a 4 semanas después de que el virus entra en el cuerpo. Esta etapa puede 
+            durar desde unos días hasta varias semanas. Algunas personas no presentan síntomas en esta etapa.
+        </p>
+        <p>Entre los posibles síntomas se incluyen los siguientes:</p>
+        <p>&bull; Fiebre</p>
+        <p>&bull; Dolor de cabeza</p>
+        <p>&bull; Dolor muscular y articular</p>
+        <p>&bull; Sarpullido</p>
+        <p>&bull; Dolor de garganta y llagas dolorosas en la boca</p>
+        <p>&bull; Ganglios linfáticos o nódulos inflamados, principalmente, en el cuello</p>
+        <p>&bull; Diarrea</p>
+        <p>&bull; Pérdida de peso</p>
+        <p>&bull; Tos</p>
+        <p>&bull; Sudoraciones nocturnas</p>
+
+        <p>
+            Estos síntomas pueden ser tan leves que quizás ni siquiera los notes. Sin embargo, la cantidad de virus en el torrente sanguíneo, lo que se conoce como carga viral, es bastante 
+            alta en este momento. Como resultado, la infección se contagia a otras personas con mayor facilidad durante la infección primaria que durante la siguiente etapa.
+        </p>
+        <p><strong>Infección clínica latente o VIH crónico</strong></p>
+        <p>
+            En esta etapa de la infección, el VIH aún se encuentra en el cuerpo y en los glóbulos blancos, que son las células del sistema inmunitario. Sin embargo, en este momento, muchas 
+            personas no presentan los síntomas ni las infecciones que el VIH puede ocasionar. Esta etapa puede durar muchos años en aquellas personas que no reciben terapia antirretroviral. 
+            Algunas personas contraen enfermedades más graves mucho antes.
+        </p>
+        <p><strong>Infección por el VIH sintomática</strong></p>
+        <p>
+            A medida que el virus se multiplica y destruye las células inmunitarias, puedes contraer infecciones leves o presentar síntomas a largo plazo, como los siguientes:
+        </p>
+        <p>&bull; Fiebre</p>
+        <p>&bull; Cansancio</p>
+        <p>&bull; Ganglios linfáticos inflamados, que suele ser uno de los primeros síntomas de la infección por el VIH</p>
+        <p>&bull; Diarrea</p>
+        <p>&bull; Pérdida de peso</p>
+        <p>&bull; Candidiasis oral</p>
+        <p>&bull; Culebrilla o herpes zóster</p>
+        <p>&bull; Neumonía</p>
+        <p><strong>Evolución al sida</strong></p>
+        <p>
+            Las muertes por SIDA a nivel mundial se han reducido significativamente debido a la aplicación de mejores tratamientos antivíricos. Gracias a estos tratamientos que salvan vidas, 
+            la mayoría de las personas que tienen el VIH en los EE. UU. no contraen el SIDA en la actualidad. Sin tratamiento, generalmente, el VIH se convierte en SIDA en unos 8 a 10 años.
+            Tener SIDA implica que el sistema inmunitario está muy dañado. Las personas que padecen SIDA son más propensas a presentar enfermedades que no contraerían si tuvieran un sistema 
+            inmunitario sano. Estas enfermedades se conocen como infecciones oportunistas o tipos de cáncer oportunistas. Algunas personas contraen infecciones oportunistas durante la etapa 
+            aguda de la enfermedad.
+        </p>
+        <p>Los siguientes pueden ser síntomas de algunas de estas infecciones:</p>
+        <p>&bull; Sudoración</p>
+        <p>&bull; Escalofríos</p>
+        <p>&bull; Fiebre que reaparece</p>
+        <p>&bull; Diarrea persistente</p>
+        <p>&bull; Ganglios linfáticos inflamados</p>
+        <p>&bull; Manchas blancas o lesiones persistentes en la lengua o en la boca</p>
+        <p>&bull; Cansancio constante</p>
+        <p>&bull; Debilidad</p>
+        <p>&bull; Pérdida de peso rápida</p>
+        <p>&bull; Erupciones cutáneas o bultos</p>
+        <p><strong>CAUSAS:</strong></p>
+        <p>
+            El VIH es producto de un virus. Puede contagiarse a través del contacto sexual, el consumo de drogas ilícitas o la acción de compartir agujas, y el contacto con sangre infectada.
+            Además, puede trasmitirse de la madre al hijo durante el embarazo, cuando se da a luz o durante la lactancia. El VIH destruye unos glóbulos blancos llamados linfocitos T CD4. Estas 
+            células desempeñan un papel fundamental en la lucha del organismo contra las enfermedades. Cuantos menos linfocitos T CD4 tengas, más débil será tu sistema inmunitario.
+        </p>
+        <p><strong>¿Cuándo el VIH se convierte en sida?</strong></p>
+        <p>
+            Puedes tener una infección por el VIH con pocos síntomas o sin ninguno de ellos durante años antes de que se convierta en SIDA. El SIDA se diagnostica cuando el recuento de linfocitos 
+            T CD4 desciende por debajo de 200 o cuando se presenta una complicación que solo ocurre si se tiene SIDA, como una infección grave o un tipo de cáncer.
+        </p>
+        <p><strong>Cómo se transmite el VIH</strong></p>
+        <p>
+            Puedes infectarte con el VIH si ingresan a tu cuerpo sangre, semen o líquidos vaginales infectados. Esto puede suceder en los siguientes casos:
+        </p>
+        <p>
+            &bull; <strong>Tener relaciones sexuales.</strong> Puedes infectarte si tienes relaciones sexuales anales o vaginales con una pareja infectada. Las relaciones sexuales orales presentan 
+            menos riesgos. El virus puede ingresar en el cuerpo a través de llagas en la boca o de pequeñas fisuras que, a veces, se producen en el recto o en la vagina durante las relaciones sexuales.
+        </p>
+        <p>
+            &bull; <strong>Compartir agujas para inyectarse drogas ilícitas.</strong> Compartir agujas y jeringas infectadas aumenta el riesgo de contraer el VIH y otras enfermedades infecciosas, como 
+            la hepatitis.
+        </p>
+        <p>
+            &bull; <strong>Recibir una transfusión de sangre.</strong> A veces, el virus se puede transmitir mediante la sangre de un donante. Los hospitales y los bancos de sangre analizan el suministro 
+            de sangre para detectar si posee el VIH. Por lo tanto, este riesgo es bajo en aquellos lugares donde se toman estas precauciones. En los países de escasos recursos, que no tienen la capacidad 
+            para analizar toda la sangre que se dona, el riesgo puede ser mayor.
+        </p>
+        <p>
+            &bull; <strong>Estar cursando un embarazo, dar a luz o amamantar.</strong> Las personas embarazadas que tienen el VIH pueden transmitirles el virus a sus bebés. Las personas infectadas por el 
+            VIH que reciben tratamiento contra la infección durante el embarazo pueden reducir significativamente el riesgo para sus bebés.
+        </p>
+        <p><strong>De qué formas no se transmite el VIH</strong></p>
+        <p>
+            No puedes infectarte con el VIH por tener un contacto casual. Eso significa que no puedes contagiarte del VIH ni contraer SIDA si abrazas, besas, bailas o le das la mano a alguien que tiene la 
+            infección. El VIH no se disemina a través del aire, del agua ni de las picaduras de insectos. No puedes contagiarte del VIH al donar sangre.
+        </p>
+        <p><strong>FACTORES DE RIESGO:</strong></p>
+        <p> 
+            Cualquier persona de cualquier edad, raza, sexo u orientación sexual puede tener VIH o SIDA. Sin embargo, el riesgo de contraer el VIH o SIDA es mayor en las siguientes circunstancias:
+        </p>
+        <p>
+            &bull; <strong>Tener relaciones sexuales sin protección.</strong> Usa un preservativo de látex o poliuretano nuevo cada vez que tengas relaciones sexuales. Las relaciones sexuales anales 
+            son más riesgosas que las vaginales. El riesgo de contraer el VIH aumenta si se tienes más de una pareja sexual.
+        </p>
+        <p>
+            &bull; <strong>Tienes una infección de trasmisión sexual. </strong> Muchas infecciones de trasmisión sexual causan llagas abiertas en los genitales. Estas llagas permiten que el VIH ingrese al 
+            organismo.
+        </p>
+        <p>
+            &bull; <strong>Inyectarse drogas ilícitas.</strong> Si compartes agujas y jeringas, puedes exponerte a sangre infectada.
+        </p>
+        <p><strong>PREVENCIÓN:</strong></p>
+        <p>
+            No existe una vacuna para prevenir la infección por el VIH ni una cura para el VIH o SIDA, pero puedes protegerte a ti mismo y proteger a los demás de la infección.
+        </p>
+        <p>
+            Para ayudar a prevenir la diseminación del VIH:
+        </p>
+        <p>
+            &bull; <strong>Considera la profilaxis previa a la exposición.</strong> Existen dos medicamentos de profilaxis previa a la exposición que se administran por vía oral y uno que se administra en 
+            forma de inyección. Los medicamentos orales son emtricitabina con tenofovir disoproxil fumarato (Truvada) y emtricitabina con tenofovir alafenamida fumarato (Descovy). El medicamento inyectable 
+            es cabotegravir (Apretude). La profilaxis previa a la exposición puede reducir el riesgo de infección por el VIH de transmisión sexual en personas con un riesgo muy alto. La profilaxis previa a 
+            la exposición puede reducir el riesgo de contraer el VIH a través de las relaciones sexuales en más del 99 % y a través del uso de drogas ilícitas inyectables en más del 74 %, según los Centros 
+            para el Control y la Prevención de Enfermedades. No se estudiaron los efectos de Descovy en personas que mantienen relaciones sexuales vaginales receptivas, que es tener relaciones sexuales con 
+            penetración.
+        </p>
+        <p>
+            Cabotegravir (Apretude) es la primera profilaxis previa a la exposición aprobada por la Administración de Alimentos y Medicamentos de EE. UU. que puede administrarse en forma de inyección para 
+            reducir el riesgo de infección por el VIH de transmisión sexual en personas con un riesgo muy alto. La inyección la administra un profesional de atención médica. Después de dos inyecciones 
+            mensuales, Apretude se administra cada dos meses. La inyección es una opción en lugar de una pastilla diaria de profilaxis previa a la exposición. Tu profesional de atención médica receta estos 
+            medicamentos para prevenir el VIH solo a las personas que aún no están infectadas. Necesitas una prueba de VIH antes de comenzar a recibir la profilaxis previa a la exposición. Deben hacerte la 
+            prueba cada tres meses para recibir las pastillas o antes de cada inyección mientras tomes la profilaxis previa a la exposición.
+        </p>
+        <p>
+            Debes tomar las pastillas todos los días o seguir cuidadosamente el programa de inyecciones. Para protegerte de otras infecciones de transmisión sexual, debes tener relaciones sexuales seguras. 
+            Si tienes hepatitis B, debes consultar a un especialista en enfermedades infecciosas o hepáticas antes de comenzar la terapia de profilaxis previa a la exposición.
+        </p>
+        <p>
+            &bull; <strong>Utiliza el tratamiento como prevención.</strong>Si tienes VIH, tomar los medicamentos para el VIH puede evitar que tu pareja se infecte con el virus. Si tus análisis de sangre no 
+            contienen ningún virus, significa que no puede detectarse tu carga viral y que no transmitirás el virus a ninguna persona a través de las relaciones sexuales. Si usas el tratamiento como prevención, 
+            debes tomar los medicamentos exactamente como te los prescribieron y someterte a controles regulares.
+        </p>
+        <p>
+            &bull; <strong>Usa profilaxis posexposición si estuviste expuesto al VIH.</strong> Si crees que estuviste expuesto a través de relaciones sexuales, agujas o en tu lugar de trabajo, comunícate con tu 
+            profesional de atención médica o dirígete a la sala de emergencias. Usar profilaxis posexposición tan pronto como puedas dentro de las primeras 72 horas puede reducir enormemente el riesgo de contraer 
+            VIH. Debes tomar el medicamento durante 28 días.
+        </p>
+        <p>
+            &bull; <strong>Usa un preservativo nuevo cada vez que tengas relaciones sexuales anales o vaginales.</strong>Existen preservativos masculinos y femeninos. Si utilizas un lubricante, asegúrate de que sea 
+            a base de agua. Los lubricantes a base de aceite pueden deteriorar los preservativos y hacer que se rompan. Durante las relaciones sexuales orales, utiliza un preservativo cortado o un campo de látex, que 
+            es un trozo de látex de calidad médica, sin lubricante.
+        </p>
+        <p>
+            &bull; <strong>nforma a tus parejas sexuales que tienes VIH.</strong> Es importante que les digas a todas tus parejas sexuales actuales y pasadas que estás infectado con el VIH para que soliciten que les 
+            realicen la prueba.
+        </p>
+        <p>
+            &bull; <strong>Usa agujas limpias. </strong>Si utilizas agujas para inyectarte drogas ilícitas, asegúrate de que estén esterilizadas. No las compartas. Utiliza los programas de intercambio de agujas de tu 
+            comunidad. Busca ayuda para tu consumo de drogas ilícitas.
+        </p>
+        <p>
+            &bull; <strong>Si estás cursando un embarazo, solicita atención médica de inmediato.</strong> Puedes transmitir el VIH a tu bebé. No obstante, si recibes tratamiento durante el embarazo, puedes reducir mucho 
+            el riesgo para tu bebé.
+        </p>
+        <p>
+            &bull; <strong>Considera la circuncisión masculina.</strong>Los estudios demuestran que la circuncisión, que es la extirpación del prepucio del pene, puede ayudar a reducir el riesgo de contraer la infección 
+            por el VIH.
+        </p>  
+  </div>
+</div>
+</div>
+{% endblock %}
