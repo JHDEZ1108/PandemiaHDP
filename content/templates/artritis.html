@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /* Estilos personalizados */
+  h1{
+    color: rgb(10, 10, 10); 
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px; 
+    font-weight: bold;
+  }
+  body{
+    background-image: url('/static/media/fondo.jpg');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center; 
+  }
+  .apartado p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; /* Añadir un espacio entre el título y el párrafo */
+  }
+  .enfermedades-container img {
+    display: block; /* Permite aplicar márgenes automáticos para centrar */
+    margin: auto; /* Centra horizontalmente */
+    max-width: 1000%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-bottom: 20px; /* Agrega un espacio debajo de la imagen */
+  }
+</style>
+
+<div class="container mt-4">
+  <div class="enfermedades-container">
+    <h1 class="text-center mb-4">ARTRITIS</h1>
+        <img src="/static/media/artritis.jpg" alt="imagen">
+        <p>
+            La artritis es la hinchazón y la sensibilidad de una o más de las articulaciones. Los principales síntomas de la artritis
+            son dolor y rigidez de las articulaciones, que suelen empeorar con la edad. Los tipos más frecuentes de artritis son la 
+            artrosis y la artritis reumatoide. La artrosis hace que el cartílago, el tejido duro y resbaladizo que recubre los extremos 
+            de los huesos donde forman una articulación, se rompa. La artritis reumatoide es una enfermedad en la cual el sistema 
+            inmunitario ataca las articulaciones, comenzando con el revestimiento de estas.
+        </p> 
+        <p>
+            Los cristales de ácido úrico, que se forman cuando hay demasiado ácido úrico en la sangre, pueden causar gota. Las infecciones 
+            o enfermedades subyacentes, como la psoriasis o el lupus, pueden causar otros tipos de artritis.
+        </p>
+        <p>
+            Los tratamientos varían según el tipo de artritis. Los principales objetivos de los tratamientos contra la artritis son reducir 
+            los síntomas y mejorar la calidad de vida.
+        </p>
+        <p><strong>SÍNTOMAS:</strong></p>
+        <p>
+            Algunos de los signos y síntomas más comunes de la artritis afectan las articulaciones. Dependiendo del tipo de artritis, los signos 
+            y síntomas pueden incluir los siguientes:
+        </p>
+        <p>&bull; Dolor</p>
+        <p>&bull; Rigidez</p>
+        <p>&bull; Hinchazón</p>
+        <p>&bull; Enrojecimiento</p>
+        <p>&bull; Disminución de la amplitud de movimiento</p>
+        <p><strong>CAUSAS:</strong></p>
+        <p>
+            &bull; <strong>Artrosis: </strong> El tipo más común de artritis, la artrosis, consiste en el daño por desgaste del cartílago 
+            de la articulación (la capa dura y resbaladiza en los extremos de los huesos donde se forman las articulaciones). El cartílago 
+            amortigua los extremos de los huesos y permite un movimiento articular casi sin fricción, pero un daño suficiente puede provocar 
+            que el hueso se muela directamente sobre el hueso, lo que causa dolor y restricción de movimiento. Este desgaste natural puede 
+            ocurrir a lo largo de muchos años o puede acelerarse debido a una lesión o infección de las articulaciones.
+        </p>
+        <p>
+            La artrosis también causa cambios en los huesos y deterioro de los tejidos conectivos que unen el músculo al hueso y mantienen 
+            unida la articulación. Si el cartílago de una articulación está gravemente dañado, el revestimiento de la articulación puede 
+            inflamarse e hincharse.
+        </p>
+        <p>
+            &bull; <strong>Artritis reumatoide: </strong> En la artritis reumatoide, el sistema inmunitario del cuerpo ataca el revestimiento 
+            de la cápsula de las articulaciones, que consiste en una membrana dura que encierra todas las partes de las articulaciones. Este 
+            revestimiento (membrana sinovial) se inflama y se hincha. El proceso de la enfermedad puede finalmente destruir el cartílago y el 
+            hueso dentro de la articulación.
+        </p>
+        <p><strong>FACTORES DE RIESGO:</strong></p>
+        <p> Los factores de riesgo de la artritis comprenden lo siguiente:</p>
+        <p>
+            &bull; <strong>Antecedentes familiares: </strong> Algunos tipos de artritis son hereditarios, por lo que es probable que contraigas artritis si 
+            tus padres o hermanos tienen este trastorno.
+        </p>
+        <p>
+            &bull; <strong>Edad: </strong> El riesgo de muchos tipos de artritis, entre ellos la artrosis, la artritis reumatoide y la gota, aumenta con la edad.
+        </p>
+        <p>
+            &bull; <strong>Sexo: </strong> Las mujeres son más propensas que los hombres a desarrollar artritis reumatoide, mientras que la mayoría de las personas 
+            que tienen gota, otro tipo de artritis, son hombres.
+        </p>
+        <p>
+            &bull; <strong>Lesión articular previa: </strong> Las personas que se han lesionado una articulación, tal vez mientras hacían deporte, con el tiempo 
+            tienen más probabilidades de sufrir artritis en esa articulación.
+        </p>
+        <p>
+            &bull; <strong>Obesidad: </strong> El peso extra fuerza las articulaciones, en especial las rodillas, las caderas y la columna. Las personas con 
+            obesidad tienen un mayor riesgo de desarrollar artritis.
+        </p>
+        <p><strong>COMPLICACIONES:</strong></p>
+        <p>
+            La artritis grave, especialmente si afecta las manos o los brazos, puede dificultar que realices las tareas diarias. La artritis de articulaciones 
+            que soportan peso puede impedirte caminar cómodamente o sentarte erguido. En algunos casos, las articulaciones pueden perder progresivamente su 
+            alineación y forma.   
+        </p>
+  </div>
+</div>
+</div>
+{% endblock %}
