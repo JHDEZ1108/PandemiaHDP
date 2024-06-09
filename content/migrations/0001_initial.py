@@ -37,4 +37,25 @@ class Migration(migrations.Migration):
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
+        migrations.CreateModel(
+            name='Disease',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=200)),
+                ('description', models.TextField(blank=True)),
+                ('image', models.CharField(max_length=200)),
+                ('created', models.DateTimeField(auto_now_add=True)),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='DiseaseComment',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('content', models.TextField(blank=True)),
+                ('created', models.DateTimeField(auto_now_add=True)),
+                ('disease', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='diseasecomments', to='content.disease')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+            ],
+        )
     ]

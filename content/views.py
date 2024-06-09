@@ -5,10 +5,8 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages  # Importa esto para enviar mensajes al template
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
-from .forms import CommentForm, BlogForm, SignUpForm
-from .models import Comment, Blog
-
-
+from .forms import CommentForm, BlogForm, DiseaseForm, DiseaseCommentForm, SignUpForm
+from .models import Comment, Blog, Disease, DiseaseComment
 
 # Create your views here.
 
@@ -24,7 +22,7 @@ def signup(request):
             try:
                 user = form.save()
                 login(request, user)
-                return redirect('blog')  # Asegúrate de que 'blog' es el nombre correcto de la URL de redirección deseada
+                return redirect('disease')  # Asegúrate de que 'blog' es el nombre correcto de la URL de redirección deseada
             except IntegrityError as e:
                 # Aquí puedes comprobar si el error es específico de un nombre de usuario duplicado o algo más
                 error_message = 'El nombre de usuario ya está en uso' if 'UNIQUE constraint' in str(e) else 'Ocurrió un error al crear el usuario'
@@ -47,7 +45,7 @@ def signin(request):
             return render(request, 'signin.html', {"form": AuthenticationForm, "error": "Username or password is incorrect."})
 
         login(request, user)
-        return redirect('blog')
+        return redirect('disease')
 
 @login_required
 def create_comment(request, blog_id):
@@ -82,7 +80,6 @@ def blog_detail(request, blog_id):
     comments = blog.comments.all()  # Utiliza el related_name para obtener todos los comentarios asociados
     return render(request, 'blog_detail.html', {'blog': blog, 'comments': comments})
 
-
 def es_superusuario(user):
     return user.is_superuser
 
@@ -115,6 +112,71 @@ def create_or_update_blog(request, blog_id=None):
         'form': form,
         'blog': blog  # Pasar el blog al contexto puede ser útil
     })
+    
+@login_required
+def create_diseasecomment(request, disease_id):
+    disease = get_object_or_404(Disease, pk=disease_id)  # Obtiene el blog o devuelve un error 404 si no existe
+    if request.method == 'GET':
+        return render(request, 'create_diseasecomment.html', {
+            'form': DiseaseCommentForm(),
+            'disease': disease  # Pasar el blog al contexto puede ser útil para mostrar información en la plantilla
+        })
+    else:
+        try:
+            form = DiseaseCommentForm(request.POST)
+            if form.is_valid():
+                new_diseasecomment = form.save(commit=False)
+                new_diseasecomment.user = request.user
+                new_diseasecomment.disease = disease  # Asocia el comentario con el blog
+                new_diseasecomment.save()
+                return redirect('disease_detail', disease_id=disease.id)  # Redirige a la vista detallada del blog
+        except ValueError:
+            return render(request, 'create_diseasecomment.html', {
+                'form': DiseaseCommentForm(),
+                'error': 'Error al agregar enfermedad',
+                'disease': disease
+            })
+                
+def disease(request):
+    diseases = Disease.objects.all()  # Obtiene todos los blogs
+    return render(request, 'disease.html', {'diseases': diseases})
+
+def disease_detail(request, disease_id):
+    disease = get_object_or_404(Disease, pk=disease_id)
+    diseasecomments = disease.diseasecomments.all()  # Utiliza el related_name para obtener todos los comentarios asociados
+    return render(request, 'disease_detail.html', {'disease': disease, 'diseasecomments': diseasecomments})
+   
+@login_required
+@user_passes_test(es_superusuario)
+def create_or_update_disease(request, disease_id=None):
+    template_name = 'create_disease.html'
+    
+    disease = None
+    if disease_id:
+        disease = get_object_or_404(Disease, pk=disease_id, user=request.user)
+        template_name = 'update_disease.html'
+    
+    if request.method == 'POST':
+        form = DiseaseForm(request.POST, instance=disease)
+        try:
+            if form.is_valid():
+                saved_disease = form.save(commit=False)
+                
+                if not disease_id:
+                    saved_disease.user =request.user
+                saved_disease.save()
+                return redirect('disease_detail', disease_id=saved_disease.id)    
+        except ValueError as e:
+            messages.error(request, f'Error al guardar la enfermedad: {e}')    
+    else:
+        form = DiseaseForm(instance=disease)
+        
+    return render(request, template_name, {
+        'form': form,
+        'disease': disease
+    })    
+        
+    
 def hipertension(request):
     return render(request, 'hipertension.html')
 def colesterol(request):

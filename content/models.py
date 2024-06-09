@@ -21,3 +21,24 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.blog.title} - por {self.user.username}"  # Retorna los primeros 50 caracteres
+
+class Disease(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200)
+    image = models.CharField(max_length=200)
+    description = models.TextField(blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.name + ' - por ' + self.user.username
+    
+class DiseaseComment(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    disease = models.ForeignKey(Disease, on_delete=models.CASCADE, related_name='diseasecomments')
+    content = models.TextField(blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.disease.name} - por {self.user.username}" 
+    
+        

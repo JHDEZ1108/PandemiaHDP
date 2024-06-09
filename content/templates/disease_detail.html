@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+  <!-- Detalles del Blog -->
+  <div class="mb-4">
+    <img src="/static/media/{{ disease.image }}" alt="{{ disease.name }}"  class="img-responsive" style="width: 50%;"/>
+    <h1 class="display-4">{{ disease.name }}</h1> <!-- Título del Blog -->
+    <p>{{ disease.description|safe }}</p> <!-- Contenido -->
+    <p class="text-muted text-end">Publicado el {{ disease.created|date:"d/m/Y" }} por {{ disease.user.username }}</p> <!-- Fecha de creación y autor, alineado a la derecha -->
+  </div>
+
+  <!-- Comentarios -->
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Comentarios:</h4> <!-- Tamaño de título ajustado -->
+    </div>
+    <ul class="list-group list-group-flush">
+      {% for comment in diseasecomments %}
+        <li class="list-group-item">
+          <h6 class="mb-1"><strong>{{ comment.user.username }}</strong> dijo:</h6> <!-- Tamaño de título ajustado -->
+          <p class="mb-1">{{ comment.content }}</p>
+          <small class="text-muted d-block">Comentado el {{ comment.created|date:"d/m/Y H:i" }}</small>
+        </li>
+      {% empty %}
+        <li class="list-group-item">No hay comentarios aún.</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Botón para añadir comentarios -->
+  <div class="d-flex justify-content-end mt-3">
+    <a href="{% url 'create_diseasecomment' disease.id %}" class="btn btn-primary">Añadir comentario</a>
+  </div>
+</div>
+{% endblock %}

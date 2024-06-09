@@ -16,21 +16,17 @@
     {% csrf_token %}
     <div class="form-group mb-3">
       <label for="id_title">Nombre de la enfermedad:</label>
-      {{ form.title|add_class:"form-control" }}
+      {{ form.name|add_class:"form-control" }}
     </div>
     <div class="form-group mb-3">
       <label for="id_content">Descripcion de enfermedad:</label>
-      {{ form.content|add_class:"form-control" }}
+      {{ form.description|add_class:"form-control" }}
     </div>
     <div class="form-group mb-3">
-      <label for="id_subtitle">Padecimientos:</label>
-      {{ form.subtitle|add_class:"form-control" }}
+      <label for="id_subtitle">Imagen:</label>
+      {{ form.image|add_class:"form-control" }}
     </div>
-    <div class="form-group mb-3">
-      <label for="id_content2">Descripcion de padecimientos:</label>
-      {{ form.content2|add_class:"form-control" }}
-    </div>
-    <button type="submit" class="btn btn-primary">Publicar Blog</button>
+    <button type="submit" class="btn btn-primary">Publicar Enfermedad</button>
   </form>
 </div>
 {% endblock %}

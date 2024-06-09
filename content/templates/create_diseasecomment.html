@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="container mt-4">
+  <h1 class="mb-4">Agregar comentario</h1>
+
+  {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+  {% endif %}
+
+  <form method="POST" class="mb-3">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="form-group mb-3">
+        {% render_field field class="form-control" placeholder="Agregar comentario..." %}
+        {% if field.help_text %}
+          <small class="form-text text-muted">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <div class="invalid-feedback">
+            {{ error }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Publicar</button>
+  </form>
+</div>
+{% endblock %}

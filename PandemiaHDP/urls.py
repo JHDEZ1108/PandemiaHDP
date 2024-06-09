@@ -22,6 +22,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('signup/', views.signup, name='signup'),
+    path('disease/', views.disease, name='disease'), #List disease
+    path('disease/<int:disease_id>/createcomment/', views.create_diseasecomment, name='create_diseasecomment'),
+    path('disease/<int:disease_id>/', views.disease_detail, name='disease_detail'),  # Detalles de un blog específico
+    path('disease/create/', views.create_or_update_disease, name='create_disease'),    
+    path('disease/<int:disease_id>/update/', views.create_or_update_disease, name='update_disease'),
+
     path('blog/', views.blog, name='blog'),  # Lista de blogs
     path('blog/hipertension.html/', views.hipertension, name='hipertension'),
     path('blog/colesterol.html/', views.colesterol, name='colesterol'),

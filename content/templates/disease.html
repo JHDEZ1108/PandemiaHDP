@@ -1,0 +1,109 @@
+{% extends 'base.html' %} {% block content %}
+<style>
+  /* Estilos personalizados */
+  .card-title a {
+    color: inherit; /* Hereda el color del texto donde se encuentra */
+    text-decoration: none; /* Elimina el subrayado */
+  }
+
+  .edit-button {
+    text-decoration: none; /* Elimina el subrayado */
+    display: inline-block;
+    color: #fff; /* Color de texto */
+    background-color: #007bff; /* Fondo azul, puedes cambiarlo */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de texto */
+  }
+  h1 {
+    color: rgb(10, 10, 10);
+    text-shadow: 3px 3px 5px hsl(0, 0%, 43%);
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio entre los cuadros de apartados */
+  }
+  .apartado {
+    width: 350px; /* Ancho del cuadro de apartado */
+    padding: 20px;
+    background-color: hsl(220, 16%, 96%); /* Color de fondo del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.1); /* Sombra */
+    display: flex; /* Hacer que los elementos dentro del apartado se coloquen en línea */
+    flex-direction: column; /* Alinear los elementos hijos verticalmente */
+    align-items: center;
+    margin: 0 auto;
+  }
+  .enfermedades {
+    color: rgb(10, 10, 10);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .apartado p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px; /* Añadir un espacio entre el título y el párrafo */
+  }
+  .apartado img {
+    max-width: 250px; /* Establece el ancho máximo de la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+    margin-right: 20px;
+  }
+  body {
+    background-image: url("/static/media/fondo.jpg");
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center;
+  }
+  .enfermedades-container {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Espacio debajo del texto */
+  }
+</style>
+
+<div class="container mt-4">
+  <div class="enfermedades-container">
+    <h1 class="text-center mb-4">ENFERMEDADES CRÓNICAS</h1>
+    <!-- Lista de Blogs -->
+    <div class="row">
+      {% for disease in diseases %}
+      <div class="col-md-6 mb-3">
+        <div class="card">
+          <img src="/static/media/{{ disease.image }}" class="card-img-top" alt="{{ disease.name }}"/>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{% url 'disease_detail' disease_id=disease.id %}"
+                >{{ disease.name }}</a
+              >
+            </h5>
+            <p class="card-subtitle mb-2 text-muted">
+              {{ disease.description|truncatechars:100|safe }}
+            </p>
+            <p class="card-text" style="text-align: right; font-weight: bold">
+              <small
+                >Publicado el {{ disease.created|date:"d/m/Y" }} por {{ disease.user.username }}</small
+              >
+            </p>
+            <!-- Botón de Editar visible solo para superusuarios -->
+            {% if request.user.is_superuser %}
+            <a
+              href="{% url 'update_disease' disease_id=disease.id %}"
+              class="edit-button"
+              >Editar</a
+            >
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endblock %}
+</div>
